@@ -1,0 +1,20 @@
+{
+    "name": "smarty-ui-vite",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "dev": "vite",
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "devDependencies": {
+        "@vitejs/plugin-vue": "3.0.3",
+        "vite": "3.0.7"
+    },
+    "dependencies": {
+        "vue": "3.2.37"
+    }
+}
