@@ -33,7 +33,7 @@ export default defineConfig({
     plugins: [
         // 添加UnoCSS插件
         Unocss({
-            presets: [presetUno(), preseAttributify(), presetIcons()],
+            presets: [presetUno(), presetAttributify(), presetIcons()],
         }),
         // 添加JSX插件
         vueJsx({
