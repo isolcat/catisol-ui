@@ -1,5 +1,13 @@
-import { createApp } from "vue";
-import SFCButton from "./SFCButton.vue";
 
-createApp(SFCButton)
+import { createApp } from "vue/dist/vue.esm-browser";
+import SmartyUI from './entry'
+
+createApp({
+    template: `
+    <div>
+        <SButton>普通按钮</SButton>
+    </div>
+    `
+})
+    .use(SmartyUI)
     .mount("#app");
