@@ -1,0 +1,232 @@
+{
+	"name": "@iconify/utils",
+	"type": "module",
+	"description": "Common functions for working with Iconify icon sets used by various packages.",
+	"author": "Vjacheslav Trushkin",
+	"version": "1.0.33",
+	"license": "MIT",
+	"bugs": "https://github.com/iconify/iconify/issues",
+	"homepage": "https://iconify.design/",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/iconify/iconify.git",
+		"directory": "packages/utils"
+	},
+	"scripts": {
+		"clean": "rimraf lib tsconfig.tsbuildinfo",
+		"lint": "eslint --fix src/**/*.ts",
+		"prebuild": "npm run lint && npm run clean",
+		"build": "unbuild",
+		"test:jest-cjs": "jest --clearCache --config=jest.config.cjs && jest --runInBand --config=jest.config.cjs",
+		"test:jest-esm": "cross-env NODE_OPTIONS=--experimental-vm-modules jest --clearCache --config=jest.config.mjs && cross-env NODE_OPTIONS=--experimental-vm-modules npx jest --runInBand --config=jest.config.mjs",
+		"test": "npm run test:jest-cjs && npm run test:jest-esm",
+		"vitest:cjs": "vitest --config vitest.config.cjs",
+		"vitest:esm": "vitest --config vitest.config.mjs",
+		"vitest": "npm run vitest:cjs && npm run vitest:esm"
+	},
+	"sideEffects": false,
+	"main": "lib/index.cjs",
+	"module": "lib/index.mjs",
+	"types": "lib/index.d.ts",
+	"exports": {
+		".": {
+			"require": "./lib/index.cjs",
+			"import": "./lib/index.mjs"
+		},
+		"./*": "./*",
+		"./lib/colors": {
+			"require": "./lib/colors/index.cjs",
+			"import": "./lib/colors/index.mjs"
+		},
+		"./lib/colors/index": {
+			"require": "./lib/colors/index.cjs",
+			"import": "./lib/colors/index.mjs"
+		},
+		"./lib/colors/keywords": {
+			"require": "./lib/colors/keywords.cjs",
+			"import": "./lib/colors/keywords.mjs"
+		},
+		"./lib/colors/types": {
+			"require": "./lib/colors/types.cjs",
+			"import": "./lib/colors/types.mjs"
+		},
+		"./lib/customisations/bool": {
+			"require": "./lib/customisations/bool.cjs",
+			"import": "./lib/customisations/bool.mjs"
+		},
+		"./lib/customisations/compare": {
+			"require": "./lib/customisations/compare.cjs",
+			"import": "./lib/customisations/compare.mjs"
+		},
+		"./lib/customisations": {
+			"require": "./lib/customisations/index.cjs",
+			"import": "./lib/customisations/index.mjs"
+		},
+		"./lib/customisations/index": {
+			"require": "./lib/customisations/index.cjs",
+			"import": "./lib/customisations/index.mjs"
+		},
+		"./lib/customisations/rotate": {
+			"require": "./lib/customisations/rotate.cjs",
+			"import": "./lib/customisations/rotate.mjs"
+		},
+		"./lib/customisations/shorthand": {
+			"require": "./lib/customisations/shorthand.cjs",
+			"import": "./lib/customisations/shorthand.mjs"
+		},
+		"./lib/icon-set/convert-info": {
+			"require": "./lib/icon-set/convert-info.cjs",
+			"import": "./lib/icon-set/convert-info.mjs"
+		},
+		"./lib/icon-set/expand": {
+			"require": "./lib/icon-set/expand.cjs",
+			"import": "./lib/icon-set/expand.mjs"
+		},
+		"./lib/icon-set/get-icon": {
+			"require": "./lib/icon-set/get-icon.cjs",
+			"import": "./lib/icon-set/get-icon.mjs"
+		},
+		"./lib/icon-set/get-icons": {
+			"require": "./lib/icon-set/get-icons.cjs",
+			"import": "./lib/icon-set/get-icons.mjs"
+		},
+		"./lib/icon-set/minify": {
+			"require": "./lib/icon-set/minify.cjs",
+			"import": "./lib/icon-set/minify.mjs"
+		},
+		"./lib/icon-set/parse": {
+			"require": "./lib/icon-set/parse.cjs",
+			"import": "./lib/icon-set/parse.mjs"
+		},
+		"./lib/icon-set/validate": {
+			"require": "./lib/icon-set/validate.cjs",
+			"import": "./lib/icon-set/validate.mjs"
+		},
+		"./lib/icon-set/validate-basic": {
+			"require": "./lib/icon-set/validate-basic.cjs",
+			"import": "./lib/icon-set/validate-basic.mjs"
+		},
+		"./lib/icon": {
+			"require": "./lib/icon/index.cjs",
+			"import": "./lib/icon/index.mjs"
+		},
+		"./lib/icon/index": {
+			"require": "./lib/icon/index.cjs",
+			"import": "./lib/icon/index.mjs"
+		},
+		"./lib/icon/merge": {
+			"require": "./lib/icon/merge.cjs",
+			"import": "./lib/icon/merge.mjs"
+		},
+		"./lib/icon/name": {
+			"require": "./lib/icon/name.cjs",
+			"import": "./lib/icon/name.mjs"
+		},
+		"./lib": {
+			"require": "./lib/index.cjs",
+			"import": "./lib/index.mjs"
+		},
+		"./lib/index": {
+			"require": "./lib/index.cjs",
+			"import": "./lib/index.mjs"
+		},
+		"./lib/loader/custom": {
+			"require": "./lib/loader/custom.cjs",
+			"import": "./lib/loader/custom.mjs"
+		},
+		"./lib/loader/fs": {
+			"require": "./lib/loader/fs.cjs",
+			"import": "./lib/loader/fs.mjs",
+			"types": "./lib/loader/fs.d.ts"
+		},
+		"./lib/loader/install-pkg": {
+			"require": "./lib/loader/install-pkg.cjs",
+			"import": "./lib/loader/install-pkg.mjs",
+			"types": "./lib/loader/install-pkg.d.ts"
+		},
+		"./lib/loader/loader": {
+			"require": "./lib/loader/loader.cjs",
+			"import": "./lib/loader/loader.mjs"
+		},
+		"./lib/loader/modern": {
+			"require": "./lib/loader/modern.cjs",
+			"import": "./lib/loader/modern.mjs"
+		},
+		"./lib/loader/node-loader": {
+			"require": "./lib/loader/node-loader.cjs",
+			"import": "./lib/loader/node-loader.mjs",
+			"types": "./lib/loader/node-loader.d.ts"
+		},
+		"./lib/loader/node-loaders": {
+			"require": "./lib/loader/node-loaders.cjs",
+			"import": "./lib/loader/node-loaders.mjs",
+			"types": "./lib/loader/node-loaders.d.ts"
+		},
+		"./lib/loader/types": {
+			"require": "./lib/loader/types.cjs",
+			"import": "./lib/loader/types.mjs"
+		},
+		"./lib/loader/utils": {
+			"require": "./lib/loader/utils.cjs",
+			"import": "./lib/loader/utils.mjs"
+		},
+		"./lib/loader/warn": {
+			"require": "./lib/loader/warn.cjs",
+			"import": "./lib/loader/warn.mjs",
+			"types": "./lib/loader/warn.d.ts"
+		},
+		"./lib/misc/strings": {
+			"require": "./lib/misc/strings.cjs",
+			"import": "./lib/misc/strings.mjs"
+		},
+		"./lib/svg/build": {
+			"require": "./lib/svg/build.cjs",
+			"import": "./lib/svg/build.mjs"
+		},
+		"./lib/svg/encode-svg-for-css": {
+			"require": "./lib/svg/encode-svg-for-css.cjs",
+			"import": "./lib/svg/encode-svg-for-css.mjs"
+		},
+		"./lib/svg/id": {
+			"require": "./lib/svg/id.cjs",
+			"import": "./lib/svg/id.mjs"
+		},
+		"./lib/svg/size": {
+			"require": "./lib/svg/size.cjs",
+			"import": "./lib/svg/size.mjs"
+		},
+		"./lib/svg/trim": {
+			"require": "./lib/svg/trim.cjs",
+			"import": "./lib/svg/trim.mjs"
+		}
+	},
+	"files": [
+		"lib",
+		"*.d.ts"
+	],
+	"dependencies": {
+		"@antfu/install-pkg": "^0.1.0",
+		"@antfu/utils": "^0.5.0",
+		"@iconify/types": "^1.1.0",
+		"debug": "^4.3.4",
+		"kolorist": "^1.5.1",
+		"local-pkg": "^0.4.1"
+	},
+	"devDependencies": {
+		"@iconify-json/flat-color-icons": "^1.0.2",
+		"@types/debug": "^4.1.7",
+		"@types/jest": "^27.4.1",
+		"@typescript-eslint/eslint-plugin": "^5.16.0",
+		"cross-env": "^7.0.3",
+		"eslint": "^8.11.0",
+		"eslint-config-prettier": "^8.5.0",
+		"eslint-plugin-prettier": "^4.0.0",
+		"jest": "^27.5.1",
+		"rimraf": "^3.0.2",
+		"ts-jest": "^27.1.3",
+		"ts-node": "^10.7.0",
+		"typescript": "^4.6.2",
+		"unbuild": "^0.7.0",
+		"vitest": "^0.7.7"
+	}
+}
