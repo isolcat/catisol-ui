@@ -30,6 +30,11 @@ export default defineConfig({
             formats: ["esm", "umd", "iife"],
         },
     },
+    server: {
+        hmr: {
+            overlay: false
+        }
+    },
     plugins: [
         // 添加UnoCSS插件
         Unocss({

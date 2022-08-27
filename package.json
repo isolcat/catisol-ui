@@ -19,6 +19,7 @@
         "vite": "3.0.7"
     },
     "dependencies": {
+        "@unocss/vite": "^0.45.13",
         "vue": "3.2.37"
     }
 }

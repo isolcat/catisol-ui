@@ -1,0 +1,64 @@
+{
+  "name": "unconfig",
+  "version": "0.3.5",
+  "packageManager": "pnpm@7.5.0",
+  "description": "A universal solution for loading configurations.",
+  "keywords": [
+    "config"
+  ],
+  "homepage": "https://github.com/antfu/unconfig#readme",
+  "bugs": {
+    "url": "https://github.com/antfu/unconfig/issues"
+  },
+  "license": "MIT",
+  "author": "Anthony Fu <anthonyfu117@hotmail.com>",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/antfu/unconfig.git"
+  },
+  "funding": "https://github.com/sponsors/antfu",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "require": "./dist/index.cjs",
+      "import": "./dist/index.mjs",
+      "types": "./dist/index.d.ts"
+    },
+    "./presets": {
+      "require": "./dist/presets.cjs",
+      "import": "./dist/presets.mjs",
+      "types": "./dist/presets.d.ts"
+    }
+  },
+  "files": [
+    "dist",
+    "*.d.ts"
+  ],
+  "sideEffects": false,
+  "dependencies": {
+    "@antfu/utils": "^0.5.2",
+    "defu": "^6.0.0",
+    "jiti": "^1.14.0"
+  },
+  "devDependencies": {
+    "@antfu/eslint-config": "^0.25.2",
+    "@antfu/ni": "^0.16.3",
+    "@types/node": "^18.0.1",
+    "bumpp": "^8.2.1",
+    "eslint": "^8.19.0",
+    "esno": "^0.16.3",
+    "typescript": "^4.7.4",
+    "unbuild": "^0.7.4",
+    "vitest": "^0.17.0"
+  },
+  "scripts": {
+    "build": "unbuild",
+    "dev": "unbuild --stub",
+    "lint": "eslint .",
+    "release": "bumpp --commit --push --tag && pnpm publish",
+    "start": "esno src/index.ts",
+    "test": "vitest"
+  }
+}
