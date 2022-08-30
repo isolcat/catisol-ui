@@ -1,3 +1,4 @@
+/// <reference types="vitest" />
 import { defineConfig } from "vite";
 import vue from "@vitejs/plugin-vue";
 import vueJsx from '@vitejs/plugin-vue-jsx'
@@ -29,6 +30,14 @@ export default defineConfig({
             // 导出模块格式
             formats: ["esm", "umd", "iife"],
         },
+    },
+    test: {
+        global: true,
+        environment: 'happy-dom',
+        // 支持tsx组件
+        transformMode: {
+            web: [/.[tj]sx$/]
+        }
     },
     server: {
         hmr: {
