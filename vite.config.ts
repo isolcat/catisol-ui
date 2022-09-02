@@ -21,6 +21,7 @@ const rollupOptions = {
 export default defineConfig({
     // 添加哭模式配置
     build: {
+        cssCodeSplit: true,   // 追加
         rollupOptions,
         minify: false,
         lib: {

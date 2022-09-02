@@ -18,35 +18,3 @@
 ```bash
 npm i smarty-admin-ui
 ```
-
-## Quick Start
-
-```js
-    import Vue from 'vue'
-    import SmartyUI from 'element-ui'
-
-    const App = {
-        template: `
-                <MyButton/>
-            `,
-    };
-
-    createApp(App)
-        .use(SmartyUI)
-        .mount("#app");
-
-```
-
-## Browser Support
-
-Modern browsers and Internet Explorer 10+.
-
-## Join Discussion Group
-
-Scan the QR code using [Dingtalk App](https://www.dingtalk.com/) to join in discussion group :
-
-<img alt="Join Discusion Group" src="https://github.com/smarty-team/smarty-admin/blob/main/assets/dingding.jpeg" width="300">
-
-
-## LICENSE
-[MIT](LICENSE)
