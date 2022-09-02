@@ -45,6 +45,8 @@ Modern browsers and Internet Explorer 10+.
 
 Scan the QR code using [Dingtalk App](https://www.dingtalk.com/) to join in discussion group :
 
+<img alt="Join Discusion Group" src="https://github.com/smarty-team/smarty-admin/blob/main/assets/dingding.jpeg" width="300">
+
 
 ## LICENSE
 [MIT](LICENSE)
