@@ -1,11 +1,12 @@
 import { defineConfig } from "vite";
-import vueJsx from '@vitejs/plugin-vue-jsx';
+import vueJsx from "@vitejs/plugin-vue-jsx";
 import Unocss from "../config/unocss";
+// https://vitejs.dev/config/
 
 export default defineConfig({
     plugins: [
-        // 添加jsx插件
+        // 添加JSX插件
         vueJsx(),
-        Unocss()
-    ]
-})
+        Unocss(),
+    ],
+});

@@ -2,9 +2,9 @@
 layout: home
 
 hero:
-  name: VitePress
-  text: Vite & Vue powered static site generator.
-  tagline: Lorem ipsum...
+  name: CatIsol-UI
+  text: Component Library for Vue3..
+  tagline: Made by vite...
   image:
     src: /logo.png
     alt: VitePress
@@ -14,5 +14,5 @@ hero:
       link: /guide/what-is-vitepress
     - theme: alt
       text: View on GitHub
-      link: https://github.com/vuejs/vitepress
+      link: https://github.com/isolcat/smarty-ui-vite
 ---
