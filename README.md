@@ -1,6 +1,5 @@
 # CatIsol-UI
-
-![IMG_6385.PNG](https://s2.loli.net/2022/10/03/AhKbVfprL4OdIak.png)
+ <img src="https://s2.loli.net/2022/10/03/AhKbVfprL4OdIak.png" width = "300" height = "200"  align=center />
 
 `CatIsol` is a mini version of a component library based on vite development.
 
