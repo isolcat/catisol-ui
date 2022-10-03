@@ -1,5 +1,5 @@
 # 快速开始
-CatIsol是一个mini版的基于vite开发的组件库。
+`CatIsol` is a mini version of a component library based on vite development.
 
 ## Features
 - ⚡️ Vue 3, Vite 2, pnpm, ESBuild - born with fastness
