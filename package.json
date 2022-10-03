@@ -22,12 +22,12 @@
         "happy-dom": "6.0.4",
         "unocss": "0.45.6",
         "vite": "3.0.7",
+        "vitepress": "1.0.0-alpha.8",
         "vitepress-theme-demoblock": "1.4.2",
         "vitest": "0.21.1"
     },
     "dependencies": {
         "@unocss/vite": "^0.45.13",
-        "vitepress": "1.0.0-alpha.19",
         "vue": "3.2.37"
     }
 }
