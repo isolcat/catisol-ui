@@ -26,6 +26,9 @@
         "vitepress-theme-demoblock": "1.4.2",
         "vitest": "0.21.1"
     },
+    "maintainers": [
+        "isolcat"
+    ],
     "dependencies": {
         "@unocss/vite": "^0.45.13",
         "vue": "3.2.37"
