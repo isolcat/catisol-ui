@@ -7,7 +7,7 @@
 
 :::demo 使用`size`、`color`、`pain`、`round`属性来定义 Button 的样式。
 
-```vue
+```js
 <template>
  <div style="margin-bottom:20px;">
     <CButton color="blue">主要按钮</CButton>
@@ -45,6 +45,7 @@
  </div>
 </template>
 ```
+
 :::
 
 ## 图标按钮
@@ -53,7 +54,7 @@
 
 :::demo 设置 icon 属性即可，icon 的列表可以参考 Element 的 icon 组件，也可以设置在文字右边的 icon ，只要使用 i 标签即可，可以使用自定义图标。
 
-```vue
+```js
 <template>
  <div class="flex flex-row">
     <CButton icon="edit" plain></CButton>
