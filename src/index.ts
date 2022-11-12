@@ -1,29 +1,29 @@
 
 import { createApp } from "vue/dist/vue.esm-browser";
-import SmartyUI from './entry'
+import CatIsolUI from './entry'
 import 'unocss'
 import '@iconify-json/ic'
 
 createApp({
     template: `
     <div>
-        <SButton>普通按钮</SButton>
+        <CButton>普通按钮</CButton>
     </div>
     <div>
-    <SButton color="blue">蓝色按钮</SButton>
-    <SButton color="green">绿色按钮</SButton>
-    <SButton color="gray">灰色按钮</SButton>
-    <SButton color="yellow">黄色按钮</SButton>
-    <SButton color="red">红色按钮</SButton>
+        <CButton color="blue">蓝色按钮</CButton>
+        <CButton color="green">绿色按钮</CButton>
+        <CButton color="gray">灰色按钮</CButton>
+        <CButton color="yellow">黄色按钮</CButton>
+        <CButton color="red">红色按钮</CButton>
    </div>
    <div>
-   <SButton color="blue" round plain icon="search" ></SButton>
-   <SButton color="green" round plain icon="edit" ></SButton>
-   <SButton color="gray" round plain icon="check" ></SButton>
-   <SButton color="yellow" round plain icon="message" ></SButton>
-   <SButton color="red" round plain icon="delete" ></SButton>
+        <CButton color="blue" round plain icon="search" ></CButton>
+        <CButton color="green" round plain icon="edit" ></CButton>
+        <CButton color="gray" round plain icon="check" ></CButton>
+        <CButton color="yellow" round plain icon="message" ></CButton>
+        <CButton color="red" round plain icon="delete" ></CButton>
     </div>
     `
 })
-    .use(SmartyUI)
+    .use(CatIsolUI)
     .mount("#app");
