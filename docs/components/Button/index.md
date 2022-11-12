@@ -16,19 +16,21 @@
     <CButton color="yellow">黄色按钮</CButton>
     <CButton color="red">红色按钮</CButton>
  </div>
- <div style="margin-bottom:20px;"
- >
+ 
+ <div style="margin-bottom:20px;">
     <CButton color="blue" plain>朴素按钮</CButton>
     <CButton color="green" plain>绿色按钮</CButton>
     <CButton color="gra   y" plain>灰色按钮</CButton>
     <CButton color="yellow" plain>黄色按钮</CButton>
     <CButton color="red" plain>红色按钮</CButton>
  </div>
+
  <div style="margin-bottom:20px;">
     <CButton size="small" plain>小按钮</CButton>
     <CButton size="medium" plain>中按钮</CButton>
     <CButton size="large" plain>大按钮</CButton>
  </div>
+
  <div style="margin-bottom:20px;">
     <CButton color="blue" round plain icon="search">搜索按钮</CButton>
     <CButton color="green" round plain icon="edit">编辑按钮</CButton>
@@ -36,6 +38,7 @@
     <CButton color="yellow" round plain icon="message">提示按钮</CButton>
     <CButton color="red" round plain icon="delete">删除按钮</CButton>
  </div>
+
  <div style="margin-bottom:20px;">
     <CButton color="blue" round plain icon="search"></CButton>
     <CButton color="green" round plain icon="edit"></CButton>
