@@ -35,7 +35,7 @@ export const props = {
 
 
 export default defineComponent({
-  name: "SButton",
+  name: "CButton",
   props,
   setup(props, { slots }) {
     
