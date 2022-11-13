@@ -4,7 +4,7 @@
 ## 基础用法
 
 基础的函数用法
-
+:::demo
 ```vue
 <template>
  <div style="margin-bottom:20px;">
@@ -46,11 +46,12 @@
  </div>
 </template>
 ```
+:::
 
 ## 图标按钮
 
 带图标的按钮可增强辨识度（有文字）或节省空间（无文字）。
-
+:::demo
 ```vue
 <template>
  <div class="flex flex-row">
@@ -61,3 +62,4 @@
  </div>
 </template>
 ```
+:::
