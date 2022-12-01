@@ -23,6 +23,9 @@ createApp({
         <CButton color="yellow" round plain icon="message" ></CButton>
         <CButton color="red" round plain icon="delete" ></CButton>
     </div>
+    <div>
+        <CInput />
+    </div>
     `
 })
     .use(CatIsolUI)
