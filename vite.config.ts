@@ -19,15 +19,15 @@ const rollupOptions = {
 
 
 export default defineConfig({
-    // 添加哭模式配置
+    // 添加模式配置
     build: {
         cssCodeSplit: true,   // 追加
         rollupOptions,
         minify: false,
         lib: {
             entry: "./src/entry.ts",
-            name: "SmartyUI",
-            fileName: "smarty-ui",
+            name: "CatIsolUI",
+            fileName: "catisol-ui",
             // 导出模块格式
             formats: ["esm", "umd", "iife"],
         },
