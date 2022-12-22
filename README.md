@@ -7,7 +7,7 @@
 `CatIsol` is a mini version of a component library based on vite development.
 
 ## Features
-- ⚡️ Vue 3, Vite 2, pnpm, ESBuild - born with fastness
+- ⚡️ Vue 3, Vite 2, pnpm, ESBuild
 - 🦾 TypeScript, of course
 - 🗂 File based routing
 - ⚙️ Unit Testing with Vitest
