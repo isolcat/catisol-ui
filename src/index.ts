@@ -26,6 +26,13 @@ createApp({
     <div>
         <CInput />
     </div>
+    <div>
+       <CLink href="#" type="primary" color="blue">Primary Link</CLink>
+       <CLink href="#" type="success" color="green">Success Link</CLink>
+       <CLink href="#" type="warning" color="yellow">Warning Link</CLink>
+       <CLink href="#" type="danger" color="red">Danger Link</CLink>
+       <CLink href="#" type="info" color="gray">Info Link</CLink>
+    </div>
     `
 })
     .use(CatIsolUI)
