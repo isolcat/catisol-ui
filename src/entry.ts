@@ -15,7 +15,7 @@ export default {
         app.component(MyButton.name, MyButton)
         app.component(SFCButton.name, SFCButton)
         app.component(JSXButton.name, JSXButton)
-        app.component(Input.name, Input)
         app.component(Link.name, Link)
+        app.component(Input.name, Input)
     }
 }
