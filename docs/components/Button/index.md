@@ -44,6 +44,7 @@
  </div>
 <details>
 
+
 <summary>展开查看</summary>
 
 ```vue
@@ -93,7 +94,18 @@
 ## 图标按钮
 
 带图标的按钮可增强辨识度（有文字）或节省空间（无文字）。
-:::demo
+
+ <div class="flex flex-row">
+    <CButton icon="edit" plain></CButton>
+    <CButton icon="delete" plain></CButton>
+    <CButton icon="share" plain></CButton>
+    <CButton round plain icon="search">搜索</CButton>
+ </div>
+
+
+<details>
+<summary>展开查看</summary>
+
 ```vue
 <template>
  <div class="flex flex-row">
@@ -104,6 +116,5 @@
  </div>
 </template>
 ```
-:::
-
+</details>
 
