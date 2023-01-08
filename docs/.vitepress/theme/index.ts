@@ -1,5 +1,5 @@
-import Theme from 'vitepress/theme'
 import CatIsolUI from '../../../src/entry'
+import Theme from 'vitepress/theme'
 import Demo from 'vitepress-theme-demoblock/components/Demo.vue'
 import DemoBlock from 'vitepress-theme-demoblock/components/DemoBlock.vue'
 import './style/var.css'
