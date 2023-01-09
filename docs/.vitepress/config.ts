@@ -1,5 +1,4 @@
 import { defineConfig } from 'vitepress'
-import { demoBlockPlugin } from 'vitepress-theme-demoblock'
 const guideSidebar = [
     {
         text: '基础',
@@ -44,7 +43,6 @@ export default defineConfig({
     },
     markdown: {
         config: (md) => {
-            md.use(demoBlockPlugin);
         },
     },
 })
