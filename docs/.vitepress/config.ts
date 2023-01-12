@@ -22,7 +22,7 @@ export default defineConfig({
         ],
         nav: [
             { text: '指南', items: guideSidebar },
-            { text: "组件", link: "/components/Button/index", activeMatch: "/components/Button/" },
+            { text: "组件", link: "/components/Button/button", activeMatch: "/components/Button/" },
         ],
         sidebar: [
             {
@@ -34,9 +34,9 @@ export default defineConfig({
             {
                 text: '组件',
                 items: [
-                    { text: '按钮', link: '/components/Button/index' },
-                    { text: '输入框', link: '/components/Input/index' },
-                    { text: '链接', link: '/components/Link/index' }
+                    { text: 'Button 按钮', link: '/components/Button/button' },
+                    { text: 'Input 输入框', link: '/components/Input/input' },
+                    { text: 'Link 链接', link: '/components/Link/link' }
                 ]
             }
         ]
