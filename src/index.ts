@@ -33,6 +33,11 @@ createApp({
        <CLink href="#" type="danger" color="red">Danger Link</CLink>
        <CLink href="#" type="info" color="gray">Info Link</CLink>
     </div>
+    <div>
+        <CTitle size="small" color="red" text="This is a small red title" />
+        <CTitle size="medium" color="blue" text="This is a medium blue title" />
+        <CTitle size="large" color="green" text="This is a large green title">
+    </div>
     `
 })
     .use(CatIsolUI)
