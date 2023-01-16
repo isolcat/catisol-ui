@@ -1,6 +1,5 @@
 import { defineComponent,PropType,ref} from "vue";
 import "uno.css";
-import { size } from "lodash";
 
 export type ISize = "small" | "medium" | "large";
 export type IColor = 'black' | 'gray' | 'red' | 'yellow' | 'green' | 'blue' | 'indigo' | 'purple' | 'pink'
