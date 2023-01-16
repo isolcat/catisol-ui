@@ -36,7 +36,8 @@ export default defineConfig({
                 items: [
                     { text: 'Button 按钮', link: '/components/Button/button' },
                     { text: 'Input 输入框', link: '/components/Input/input' },
-                    { text: 'Link 链接', link: '/components/Link/link' }
+                    { text: 'Link 链接', link: '/components/Link/link' },
+                    { text: 'Title 标题', link: '/components/Title/title' }
                 ]
             }
         ]
