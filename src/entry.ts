@@ -2,6 +2,7 @@ import { App } from "vue";
 import MyButton from "./button/Button"
 import Input from "./input";
 import Link from "./link";
+import Title from "./title";
 import SFCButton from "./SFCButton.vue";
 import JSXButton from "./JSXButton";
 
@@ -17,5 +18,6 @@ export default {
         app.component(JSXButton.name, JSXButton)
         app.component(Link.name, Link)
         app.component(Input.name, Input)
+        app.component(Title.name, Title)
     }
 }
