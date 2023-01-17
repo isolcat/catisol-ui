@@ -17,13 +17,12 @@ describe('Link', () => {
 })
 
 //对组件颜色进行测试，测试默认link颜色
-describe('color', () => {
-    test('default', () => {
-        const wrapper = shallowMount(Link, {
-            slots: {
-                default: 'Link'
-            }
-        })
-        expect(wrapper.classes().map(v => v.replace('\n', '')).includes('')).toBe(true)
-    })
-})
+describe("Link", () => {
+    test("default color is black", () => {
+        // 使用 shallowMount 方法挂载组件
+        const wrapper = shallowMount(Link);
+
+        // 断言组件默认颜色是否是 black
+        expect(wrapper.props().color).toBe("black");
+    });
+});
