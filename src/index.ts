@@ -5,7 +5,7 @@ import 'unocss'
 import '@iconify-json/ic'
 
 createApp({
-    template: `
+  template: `
     <div>
         <CButton>普通按钮</CButton>
     </div>
@@ -38,7 +38,7 @@ createApp({
         <CTitle size="medium" color="blue" text="This is a medium blue title" />
         <CTitle size="large" color="green" text="This is a large green title">
     </div>
-    <div>
+    <div style="display: flex">
     <Checkbox   size="medium"
       text="Select me"
       shape="circle"
@@ -52,5 +52,5 @@ createApp({
   </div>
     `
 })
-    .use(CatIsolUI)
-    .mount("#app");
+  .use(CatIsolUI)
+  .mount("#app");
