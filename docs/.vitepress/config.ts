@@ -39,6 +39,12 @@ export default defineConfig({
                     { text: 'Link 链接', link: '/components/Link/link' },
                     { text: 'Title 标题', link: '/components/Title/title' }
                 ]
+            },
+            {
+                text: '表单',
+                items: [
+                    { text: 'CheckBox 复选框', link: '/components/CheckBox/checkbox' }
+                ]
             }
         ]
     },
