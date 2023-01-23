@@ -38,6 +38,18 @@ createApp({
         <CTitle size="medium" color="blue" text="This is a medium blue title" />
         <CTitle size="large" color="green" text="This is a large green title">
     </div>
+    <div>
+    <Checkbox   size="medium"
+      text="Select me"
+      shape="circle"
+    />
+    <Checkbox shape="circle"  size="small" shape="circle" text="Or select me"
+    />
+    <Checkbox   size="large"
+      text="Select me"
+      disabled
+    />
+  </div>
     `
 })
     .use(CatIsolUI)
