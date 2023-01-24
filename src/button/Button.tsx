@@ -29,6 +29,11 @@ export const props = {
     type: String,
     default: "",
   },
+   // 新增
+   disabled: {
+    type: Boolean,
+    default: false,
+  },
 } as const;
 
 
@@ -58,6 +63,12 @@ export default defineComponent({
 
     return () => (
       <button
+      disabled={props.disabled}
+        onClick={() => {
+            if (!props.disabled) {
+                // your code
+            }
+        }}
         class={`
           py-${size[props.size].y}
           px-${size[props.size].x}
@@ -72,6 +83,7 @@ export default defineComponent({
           hover:text-white
           transition duration-300 ease-in-out transform hover:scale-105
           mx-1
+          ${props.disabled ? 'cursor-not-allowed opacity-50':''}
           `}
       >
         {props.icon !== "" ? (

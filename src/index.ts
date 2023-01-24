@@ -7,7 +7,7 @@ import '@iconify-json/ic'
 createApp({
   template: `
     <div>
-        <CButton>普通按钮</CButton>
+        <CButton disabled>普通按钮</CButton>
     </div>
     <div>
         <CButton color="blue">蓝色按钮</CButton>
@@ -24,10 +24,10 @@ createApp({
         <CButton color="red" round plain icon="delete" ></CButton>
     </div>
     <div>
-        <CInput />
+        <CInput disabled />
     </div>
     <div>
-       <CLink href="#" type="primary" color="blue">Primary Link</CLink>
+       <CLink disabled href="#" type="primary" color="blue">Primary Link</CLink>
        <CLink href="#" type="success" color="green">Success Link</CLink>
        <CLink href="#" type="warning" color="yellow">Warning Link</CLink>
        <CLink href="#" type="danger" color="red">Danger Link</CLink>
