@@ -20,6 +20,10 @@ export const props = {
     type: String,
     required: true,
   },
+  disabled: {
+    type: Boolean,
+    default:false
+  }
 } as const;
 
 export default defineComponent({
@@ -33,12 +37,17 @@ export default defineComponent({
         hover:text-${props.color}-400
         cursor-pointer
         text-lg
-        hover:text-white
-        transition duration-300 ease-in-out transform hover:scale-105
+        ${props.disabled ? '' : 'hover:text-white transition duration-300 ease-in-out transform hover:scale-105'}
         mx-1
         decoration-none
         `}
-      href={props.href}      
+      href={props.href}
+      disabled={props.disabled}
+    onClick={(e) => {
+        if (props.disabled) {
+            e.preventDefault()
+        }
+      }}      
     >
       {slots.default ? slots.default() : 'Link'}
     </a>
