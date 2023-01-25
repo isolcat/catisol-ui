@@ -2,9 +2,22 @@
 
 # 快速开始
 `CatIsol` is a mini version of a component library based on vite development.
-## Install
+## 引入
+这里当然就推荐pnpm
 ```shell
-npm i catisol-ui
+pnpm add catisol-ui
+```
+在`main.js`或`main.ts`添加：
+```js
+import { createApp } from 'vue'
+import App from './App.vue'
+import catisol from 'catisol-ui'
+
+import 'catisol-ui/dist/assets/entry.67bddf0c.css'
+
+import './assets/main.css'
+
+createApp(App).use(catisol).mount('#app')
 ```
 
 

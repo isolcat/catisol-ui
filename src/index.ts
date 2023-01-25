@@ -1,7 +1,7 @@
 
 import { createApp } from "vue/dist/vue.esm-browser";
 import CatIsolUI from './entry'
-import 'unocss'
+import 'uno.css'
 import '@iconify-json/ic'
 
 createApp({
