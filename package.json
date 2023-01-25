@@ -1,8 +1,8 @@
 {
     "name": "catisol-ui",
-    "version": "0.9.1",
+    "version": "0.9.4",
     "description": "",
-    "main": "index.js",
+    "main": "./src/entry.ts",
     "scripts": {
         "test": "vitest",
         "build": "vite build",
@@ -13,7 +13,7 @@
     },
     "keywords": [],
     "author": "",
-    "license": "ISC",
+    "license": "MIT",
     "devDependencies": {
         "@iconify-json/ic": "1.1.4",
         "@vitejs/plugin-vue": "3.0.3",
