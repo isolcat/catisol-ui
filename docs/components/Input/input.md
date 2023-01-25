@@ -19,3 +19,21 @@
 </template>
 ```
 </details>
+
+## 禁用状态
+
+ <div>
+    <CInput disabled />
+ </div>
+
+ <details>
+<summary>展开查看</summary>
+
+```vue
+<template>
+<div>
+   <CInput disabled />
+</div>
+</template>
+```
+</details>
