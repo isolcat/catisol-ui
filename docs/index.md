@@ -3,8 +3,8 @@ layout: home
 
 hero:
   name: CatIsol-UI
-  text: Component Library for Vue3..
-  tagline: Made by vite...
+  text: 基于Vue3与UnoCSS设计的组件库
+  tagline: Made by vite
   image:
     src: /logo.png
     alt: VitePress
@@ -14,16 +14,16 @@ hero:
       link: /guide/
     - theme: alt
       text: View on GitHub
-      link: https://github.com/isolcat/smarty-ui-vite
+      link: https://github.com/isolcat/catisol-ui
 
 features:
   - icon: ⚡️
-    title: Vite, The DX that can't be beat
-    details: Lorem ipsum...
-  - icon: 🖖
-    title: Power of Vue meets Markdown
-    details: Lorem ipsum...
-  - icon: 🛠️
-    title: Simple and minimal, always
-    details: Lorem ipsum...
+    title: 轻量、高性能且极具灵活性
+    details: UnoCSS原子化引擎
+  - icon: 😶‍🌫️
+    title: 稳定性和可靠性
+    details: 所有组件均使用vitest进行单元测试
+  - icon: 🐱
+    title: 静态类型检查
+    details: 使用tsx构建组件
 ---
