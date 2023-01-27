@@ -8,7 +8,7 @@
       "name": "pnpm",
       "message": "package.json already exists",
       "code": "ERR_PNPM_PACKAGE_JSON_EXISTS",
-      "stack": "pnpm: package.json already exists\n    at Object.handler [as init] (D:\\Develop\\nodejs\\node_global\\node_modules\\pnpm\\dist\\pnpm.cjs:172802:15)\n    at D:\\Develop\\nodejs\\node_global\\node_modules\\pnpm\\dist\\pnpm.cjs:175303:51\n    at async run (D:\\Develop\\nodejs\\node_global\\node_modules\\pnpm\\dist\\pnpm.cjs:175279:34)\n    at async runPnpm (D:\\Develop\\nodejs\\node_global\\node_modules\\pnpm\\dist\\pnpm.cjs:175497:5)\n    at async D:\\Develop\\nodejs\\node_global\\node_modules\\pnpm\\dist\\pnpm.cjs:175489:7"
+      "stack": "pnpm: package.json already exists\n   at Object.handler [as init] (D:\\Develop\\nodejs\\node_global\\node_modules\\pnpm\\dist\\pnpm.cjs:172802:15)\n    at D:\\Develop\\nodejs\\node_global\\node_modules\\pnpm\\dist\\pnpm.cjs:175303:51\n    at async run (D:\\Develop\\nodejs\\node_global\\node_modules\\pnpm\\dist\\pnpm.cjs:175279:34)\n    at async runPnpm (D:\\Develop\\nodejs\\node_global\\node_modules\\pnpm\\dist\\pnpm.cjs:175497:5)\n    at async D:\\Develop\\nodejs\\node_global\\node_modules\\pnpm\\dist\\pnpm.cjs:175489:7"
     }
   }
 }
