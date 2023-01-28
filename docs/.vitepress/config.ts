@@ -35,15 +35,16 @@ export default defineConfig({
                 text: '组件',
                 items: [
                     { text: 'Button 按钮', link: '/components/Button/button' },
-                    { text: 'Input 输入框', link: '/components/Input/input' },
                     { text: 'Link 链接', link: '/components/Link/link' },
-                    { text: 'Title 标题', link: '/components/Title/title' }
+                    { text: 'Title 标题', link: '/components/Title/title' },
+                    { text: 'Avatar 头像', link: '/components/Avatar/avatar' }
                 ]
             },
             {
                 text: '表单',
                 items: [
-                    { text: 'CheckBox 复选框', link: '/components/CheckBox/checkbox' }
+                    { text: 'CheckBox 复选框', link: '/components/CheckBox/checkbox' },
+                    { text: 'Input 输入框', link: '/components/Input/input' },
                 ]
             }
         ]
