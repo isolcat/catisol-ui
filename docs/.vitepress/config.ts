@@ -45,6 +45,7 @@ export default defineConfig({
                 items: [
                     { text: 'CheckBox 复选框', link: '/components/CheckBox/checkbox' },
                     { text: 'Input 输入框', link: '/components/Input/input' },
+                    { text: 'Switch 开关', link: '/components/Switch/switch' }
                 ]
             }
         ]
