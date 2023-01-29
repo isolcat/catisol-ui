@@ -1,6 +1,6 @@
 import { defineComponent, createVNode, ref, openBlock, createElementBlock, createTextVNode } from "vue";
 const __uno = "";
-const props$3 = {
+const props$5 = {
   size: {
     type: String,
     default: "medium"
@@ -28,7 +28,7 @@ const props$3 = {
 };
 const MyButton = defineComponent({
   name: "CButton",
-  props: props$3,
+  props: props$5,
   setup(props2, {
     slots
   }) {
@@ -95,7 +95,7 @@ const Input = defineComponent({
     }, null)]);
   }
 });
-const props$2 = {
+const props$4 = {
   type: {
     type: String,
     default: "default"
@@ -119,7 +119,7 @@ const props$2 = {
 };
 const Link = defineComponent({
   name: "CLink",
-  props: props$2,
+  props: props$4,
   setup(props2, {
     slots
   }) {
@@ -143,7 +143,7 @@ const Link = defineComponent({
     }, [slots.default ? slots.default() : "Link"]);
   }
 });
-const props$1 = {
+const props$3 = {
   size: {
     type: String,
     default: "medium"
@@ -159,7 +159,7 @@ const props$1 = {
 };
 const Title = defineComponent({
   name: "CTitle",
-  props: props$1,
+  props: props$3,
   setup(props2, {
     slots
   }) {
@@ -185,7 +185,7 @@ const Title = defineComponent({
     }, [props2.text, slots.default ? slots.default() : ""]);
   }
 });
-const props = {
+const props$2 = {
   size: {
     type: String,
     default: "medium"
@@ -205,7 +205,7 @@ const props = {
 };
 const CheckBox = defineComponent({
   name: "Checkbox",
-  props,
+  props: props$2,
   setup(props2, {
     slots
   }) {
@@ -272,6 +272,82 @@ const JSXButton = defineComponent({
     return createVNode("button", null, [createTextVNode("JSX Button")]);
   }
 });
+const props$1 = {
+  shape: {
+    type: String,
+    default: "rounded-full"
+  },
+  size: {
+    type: String,
+    default: "medium"
+  },
+  src: {
+    type: String,
+    required: true
+  }
+};
+const Avatar = defineComponent({
+  name: "CAvatar",
+  props: props$1,
+  setup(props2) {
+    const size = {
+      small: {
+        width: "2rem",
+        height: "2rem"
+      },
+      medium: {
+        width: "3rem",
+        height: "3rem"
+      },
+      large: {
+        width: "4rem",
+        height: "4rem"
+      }
+    };
+    return () => createVNode("div", null, [createVNode("img", {
+      "src": props2.src,
+      "class": `avatar ${props2.shape} ${props2.size}`,
+      "style": {
+        width: size[props2.size].width,
+        height: size[props2.size].height
+      }
+    }, null)]);
+  }
+});
+const _switch = "";
+const props = {
+  size: {
+    type: String,
+    default: "medium"
+  },
+  disabled: {
+    type: Boolean,
+    default: false
+  },
+  checked: {
+    type: Boolean,
+    default: false
+  }
+};
+const Switch = defineComponent({
+  name: "CSwitch",
+  props,
+  setup(props2, {
+    slots
+  }) {
+    const checkedRef = ref(props2.checked);
+    return () => createVNode("div", null, [createVNode("input", {
+      "type": "checkbox",
+      "class": `switch ${props2.size}
+                `,
+      "disabled": props2.disabled,
+      "checked": checkedRef.value,
+      "onClick": () => {
+        checkedRef.value = !checkedRef.value;
+      }
+    }, null)]);
+  }
+});
 const entry = {
   install(app) {
     app.component(MyButton.name, MyButton);
@@ -281,9 +357,12 @@ const entry = {
     app.component(Input.name, Input);
     app.component(Title.name, Title);
     app.component(CheckBox.name, CheckBox);
+    app.component(Avatar.name, Avatar);
+    app.component(Switch.name, Switch);
   }
 };
 export {
+  Avatar,
   CheckBox,
   Input,
   JSXButton,
