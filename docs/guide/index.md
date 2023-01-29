@@ -11,7 +11,7 @@ import { createApp } from 'vue'
 import App from './App.vue'
 import catisol from 'catisol-ui'
 
-import 'catisol-ui/dist/assets/entry.67bddf0c.css'
+import 'catisol-ui/dist/assets/entry.284eadfc.css'
 
 import './assets/main.css'
 
