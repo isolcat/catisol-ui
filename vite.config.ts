@@ -38,7 +38,10 @@ export default defineConfig({
         // 支持tsx组件
         transformMode: {
             web: [/.[tj]sx$/]
-        }
+        },
+        coverage: {
+            reporter: ['text', 'json', 'html'],
+        },
     },
     server: {
         hmr: {

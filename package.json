@@ -9,6 +9,7 @@
     ],
     "scripts": {
         "test": "vitest",
+        "coverage": "vitest run --coverage",
         "build": "vite build",
         "dev": "vite",
         "docs:dev": "vitepress dev docs",
@@ -23,6 +24,7 @@
         "@vitejs/plugin-vue": "3.0.3",
         "@vitejs/plugin-vue-jsx": "2.0.0",
         "@vue/test-utils": "2.0.2",
+        "c8": "^7.13.0",
         "happy-dom": "6.0.4",
         "postcss": "^8.4.21",
         "postcss-prefix-selector": "^1.16.0",
