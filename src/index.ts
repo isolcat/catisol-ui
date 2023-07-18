@@ -59,7 +59,7 @@ createApp({
   <CSwitch size="large" disabled/>
   <CTextarea placeholder="Enter your text here" />
   <CTextarea maxLength="100" showWordLimit />
-
+  <CUpload />
   `
 })
   .use(CatIsolUI)

@@ -8,11 +8,11 @@ import SFCButton from './SFCButton.vue';
 import JSXButton from './JSXButton';
 import Avatar from './avatar';
 import Switch from './switch';
-import Skeleton from './skeleton';
 import Textarea from './textarea';
+import Upload from './upload';
 
 // 导出单独组件
-export { MyButton, SFCButton, JSXButton, Input, Link, CheckBox, Avatar, Skeleton, Textarea };
+export { MyButton, SFCButton, JSXButton, Input, Link, CheckBox, Avatar, Textarea, Upload };
 
 // 编写一个插件，实现一个install方法
 
@@ -27,7 +27,7 @@ export default {
 		app.component(CheckBox.name, CheckBox);
 		app.component(Avatar.name, Avatar);
 		app.component(Switch.name, Switch);
-		app.component(Skeleton.name, Skeleton);
 		app.component(Textarea.name, Textarea);
+		app.component(Upload.name, Upload);
 	}
 };
