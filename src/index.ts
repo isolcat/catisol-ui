@@ -56,19 +56,9 @@ createApp({
   <CSwitch size="small" checked/>  
   <CSwitch size="medium"/>  
   <CSwitch size="large"/>  
-  <CSwitch size="large" disabled/>  
-   <div class="container mx-auto">
-    <Collapse title="收缩面板" initialExpanded>
-      <p>这是一个展开的面板。</p>
-      <p>你可以在这里添加需要展示的内容。</p>
-      <p>当你再次点击标题时，这个面板将会折叠起来。</p>
-    </Collapse>
-    <Collapse title="另一个收缩面板">
-      <p>这是另一个展开的面板。</p>
-      <p>你也可以在这里添加需要展示的内容。</p>
-      <p>同样，当你再次点击标题时，这个面板将会折叠起来。</p>
-    </Collapse>
-  </div>
+  <CSwitch size="large" disabled/>
+  <CTextarea placeholder="Enter your text here" />
+  <CTextarea maxLength="100" showWordLimit />
 
   `
 })
