@@ -39,7 +39,6 @@
     "dependencies": {
         "@unocss/vite": "^0.45.13",
         "@vueuse/core": "^10.2.1",
-        "sass": "^1.64.1",
         "vue": "3.2.37"
     }
 }
