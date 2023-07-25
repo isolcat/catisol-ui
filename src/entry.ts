@@ -10,9 +10,12 @@ import Avatar from './avatar';
 import Switch from './switch';
 import Textarea from './textarea';
 import Upload from './upload';
+import NumberInput from './numberInput';
+import Icon from './icon';
+import Select from './select';
 
 // 导出单独组件
-export { MyButton, SFCButton, JSXButton, Input, Link, CheckBox, Avatar, Textarea, Upload };
+export { MyButton, SFCButton, JSXButton, Input, Link, CheckBox, Avatar, Textarea, Upload, NumberInput ,Icon,Select};
 
 // 编写一个插件，实现一个install方法
 
@@ -29,5 +32,8 @@ export default {
 		app.component(Switch.name, Switch);
 		app.component(Textarea.name, Textarea);
 		app.component(Upload.name, Upload);
+		app.component(NumberInput.name, NumberInput);
+		app.component(Icon.name, Icon);
+		app.component(Select.name, Select);
 	}
 };

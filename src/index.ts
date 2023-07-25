@@ -1,11 +1,10 @@
-
-import { createApp } from "vue/dist/vue.esm-browser";
-import CatIsolUI from './entry'
-import 'uno.css'
-import '@iconify-json/ic'
+import { createApp } from 'vue/dist/vue.esm-browser';
+import CatIsolUI from './entry';
+import 'uno.css';
+import '@iconify-json/ic';
 
 createApp({
-  template: `
+	template: `
     <div>
         <CButton disabled>普通按钮</CButton>
     </div>
@@ -57,10 +56,16 @@ createApp({
   <CSwitch size="medium"/>  
   <CSwitch size="large"/>  
   <CSwitch size="large" disabled/>
+  <CSelect v-model="selection" :option="['小明', '小刚', '小红']" />
+  <div class="flex">
+    <div class="icon-demo-box"><CIcon name="heart-fill" color="red" /></div>
+    <div class="icon-demo-box"><CIcon name="heart-fill" color="red" :size="28" /></div>
+    <div class="icon-demo-box"><CIcon name="heart-fill" color="red" :size="34" /></div>
+    <div class="icon-demo-box"><CIcon name="heart-fill" color="red" :size="42" /></div>
+  </div>
   <CTextarea placeholder="Enter your text here" />
   <CTextarea maxLength="100" showWordLimit />
-  <CUpload />
   `
 })
-  .use(CatIsolUI)
-  .mount("#app");
+	.use(CatIsolUI)
+	.mount('#app');
