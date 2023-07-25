@@ -1,0 +1,81 @@
+/* Add your custom styles for the CSelect component here */
+
+/* Main container */
+.CSelect {
+    position: relative;
+    width: 200px;
+    /* Set the desired width */
+}
+
+/* Input container */
+.CSelect__inner {
+    display: flex;
+    align-items: center;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: border-color 0.3s ease;
+}
+
+/* Input box */
+.CSelect__input {
+    flex: 1;
+    outline: none;
+    border: none;
+    background: transparent;
+}
+
+/* Selected item clear icon */
+.CSelect--clear {
+    margin-left: 10px;
+    color: #888;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+/* Options container */
+.CSelect--options {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    max-height: 200px;
+    /* Set the desired max-height for the dropdown */
+    overflow-y: auto;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    z-index: 1;
+}
+
+/* Option item */
+.CSelect--item {
+    padding: 8px 12px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Active/selected option item */
+.CSelect--item__active {
+    background-color: #f0f0f0;
+}
+
+/* Optional focus style */
+.select--focus {
+    border-color: #007bff;
+}
+
+/* Optional animation for the dropdown */
+/* (You can use your preferred animation library) */
+.slide-fade__select-enter-active,
+.slide-fade__select-leave-active {
+    transition: opacity 0.3s, transform 0.3s;
+}
+
+.slide-fade__select-enter-from,
+.slide-fade__select-leave-to {
+    opacity: 0;
+    transform: translateY(-10px);
+}

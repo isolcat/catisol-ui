@@ -1,6 +1,6 @@
 import { defineComponent, createVNode, ref, openBlock, createElementBlock, createTextVNode } from "vue";
 const __uno = "";
-const props$5 = {
+const props$6 = {
   size: {
     type: String,
     default: "medium"
@@ -28,7 +28,7 @@ const props$5 = {
 };
 const MyButton = defineComponent({
   name: "CButton",
-  props: props$5,
+  props: props$6,
   setup(props2, {
     slots
   }) {
@@ -95,7 +95,7 @@ const Input = defineComponent({
     }, null)]);
   }
 });
-const props$4 = {
+const props$5 = {
   type: {
     type: String,
     default: "default"
@@ -119,7 +119,7 @@ const props$4 = {
 };
 const Link = defineComponent({
   name: "CLink",
-  props: props$4,
+  props: props$5,
   setup(props2, {
     slots
   }) {
@@ -143,7 +143,7 @@ const Link = defineComponent({
     }, [slots.default ? slots.default() : "Link"]);
   }
 });
-const props$3 = {
+const props$4 = {
   size: {
     type: String,
     default: "medium"
@@ -159,7 +159,7 @@ const props$3 = {
 };
 const Title = defineComponent({
   name: "CTitle",
-  props: props$3,
+  props: props$4,
   setup(props2, {
     slots
   }) {
@@ -185,7 +185,7 @@ const Title = defineComponent({
     }, [props2.text, slots.default ? slots.default() : ""]);
   }
 });
-const props$2 = {
+const props$3 = {
   size: {
     type: String,
     default: "medium"
@@ -205,7 +205,7 @@ const props$2 = {
 };
 const CheckBox = defineComponent({
   name: "Checkbox",
-  props: props$2,
+  props: props$3,
   setup(props2, {
     slots
   }) {
@@ -272,7 +272,7 @@ const JSXButton = defineComponent({
     return createVNode("button", null, [createTextVNode("JSX Button")]);
   }
 });
-const props$1 = {
+const props$2 = {
   shape: {
     type: String,
     default: "rounded-full"
@@ -288,7 +288,7 @@ const props$1 = {
 };
 const Avatar = defineComponent({
   name: "CAvatar",
-  props: props$1,
+  props: props$2,
   setup(props2) {
     const size = {
       small: {
@@ -315,7 +315,7 @@ const Avatar = defineComponent({
   }
 });
 const _switch = "";
-const props = {
+const props$1 = {
   size: {
     type: String,
     default: "medium"
@@ -331,7 +331,7 @@ const props = {
 };
 const Switch = defineComponent({
   name: "CSwitch",
-  props,
+  props: props$1,
   setup(props2, {
     slots
   }) {
@@ -348,6 +348,149 @@ const Switch = defineComponent({
     }, null)]);
   }
 });
+const textarea = "";
+const props = {
+  disabled: {
+    type: Boolean,
+    default: false
+  },
+  placeholder: {
+    type: String,
+    default: ""
+  },
+  maxLength: {
+    type: Number,
+    default: Infinity
+  }
+};
+const Textarea = defineComponent({
+  name: "CTextarea",
+  props,
+  setup(props2, {
+    slots
+  }) {
+    const textareaRef = ref(null);
+    const isFocused = ref(false);
+    const handleFocus = () => {
+      isFocused.value = true;
+    };
+    const handleBlur = () => {
+      isFocused.value = false;
+    };
+    const handleInput = () => {
+      const textarea2 = textareaRef.value;
+      let value = textarea2.value;
+      if (value.length > props2.maxLength) {
+        value = value.slice(0, props2.maxLength);
+        textarea2.value = value;
+      }
+    };
+    return () => createVNode("div", {
+      "class": "ctextarea"
+    }, [createVNode("textarea", {
+      "ref": textareaRef,
+      "class": {
+        "w-full h-32 outline-none bg-gray-200 p-2 rounded-lg text-lg": true,
+        "hover:bg-gray-300": !isFocused.value,
+        "focus:bg-white focus:border-blue-500 transition duration-300 ease-in-out": !props2.disabled && !isFocused.value,
+        "cursor-not-allowed": props2.disabled
+      },
+      "style": {
+        resize: "vertical"
+      },
+      "disabled": props2.disabled,
+      "placeholder": props2.placeholder,
+      "maxlength": props2.maxLength,
+      "onInput": handleInput,
+      "onFocus": handleFocus,
+      "onBlur": handleBlur
+    }, null)]);
+  }
+});
+const upload = "";
+const Upload = defineComponent({
+  name: "CUpload",
+  setup() {
+    const fileInputRef = ref(null);
+    const handleFileChange = () => {
+      fileInputRef.value.files[0];
+    };
+    return () => createVNode("div", {
+      "class": "upload"
+    }, [createVNode("label", {
+      "for": "my-file",
+      "class": "upload-label"
+    }, [createTextVNode("\u4E0A\u4F20\u6587\u4EF6")]), createVNode("input", {
+      "id": "my-file",
+      "type": "file",
+      "class": "inputFile",
+      "ref": fileInputRef,
+      "style": "display: none;",
+      "onChange": handleFileChange
+    }, null)]);
+  }
+});
+const NumberInput = defineComponent({
+  name: "CNumberInput",
+  props: {
+    modelValue: {
+      type: Number,
+      default: 0
+    },
+    min: {
+      type: Number,
+      default: -Infinity
+    },
+    max: {
+      type: Number,
+      default: Infinity
+    },
+    step: {
+      type: Number,
+      default: 1
+    }
+  },
+  emits: ["update:modelValue"],
+  setup(props2, {
+    emit
+  }) {
+    const value = ref(props2.modelValue);
+    const handleInputChange = (event) => {
+      const inputValue = Number(event.target.value);
+      if (!isNaN(inputValue)) {
+        value.value = inputValue;
+        emit("update:modelValue", inputValue);
+      }
+    };
+    const handleIncrease = () => {
+      const newValue = value.value + props2.step;
+      if (newValue <= props2.max) {
+        value.value = newValue;
+        emit("update:modelValue", newValue);
+      }
+    };
+    const handleDecrease = () => {
+      const newValue = value.value - props2.step;
+      if (newValue >= props2.min) {
+        value.value = newValue;
+        emit("update:modelValue", newValue);
+      }
+    };
+    return {
+      value,
+      handleInputChange,
+      handleIncrease,
+      handleDecrease
+    };
+  },
+  template: `
+    <div>
+      <button @click="handleDecrease">-</button>
+      <input type="number" :value="value" @input="handleInputChange" />
+      <button @click="handleIncrease">+</button>
+    </div>
+  `
+});
 const entry = {
   install(app) {
     app.component(MyButton.name, MyButton);
@@ -359,6 +502,9 @@ const entry = {
     app.component(CheckBox.name, CheckBox);
     app.component(Avatar.name, Avatar);
     app.component(Switch.name, Switch);
+    app.component(Textarea.name, Textarea);
+    app.component(Upload.name, Upload);
+    app.component(NumberInput.name, NumberInput);
   }
 };
 export {
@@ -368,6 +514,9 @@ export {
   JSXButton,
   Link,
   MyButton,
+  NumberInput,
   SFCButton,
+  Textarea,
+  Upload,
   entry as default
 };

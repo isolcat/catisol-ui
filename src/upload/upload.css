@@ -1,0 +1,31 @@
+.upload {
+    position: relative;
+    display: inline-block;
+}
+
+.inputFile {
+    position: absolute;
+    width: 0;
+    height: 0;
+    opacity: 0;
+    overflow: hidden;
+}
+
+.upload-label {
+    display: inline-block;
+    padding: 0.5em 1em;
+    background-color: #007bff;
+    color: #fff;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+
+.inputfile+label::after {
+    content: '选择了文件：';
+    margin-left: 10px;
+}
+
+.inputfile+label+span {
+    display: inline-block;
+}
