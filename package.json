@@ -29,7 +29,6 @@
         "postcss": "^8.4.21",
         "postcss-prefix-selector": "^1.16.0",
         "unocss": "0.45.6",
-        "@vueuse/core": "^10.2.1",
         "vite": "3.0.7",
         "vitepress": "v1.0.0-alpha.31",
         "vitest": "0.21.1"
