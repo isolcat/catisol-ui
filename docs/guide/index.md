@@ -7,15 +7,13 @@ pnpm add catisol-ui
 ```
 在`main.js`或`main.ts`添加：
 ```js
-import { createApp } from 'vue'
-import App from './App.vue'
-import catisol from 'catisol-ui'
+import { createApp } from 'vue';
+import App from './App.vue';
+import catisol from 'catisol-ui';
 
-import 'catisol-ui/dist/assets/entry.284eadfc.css'
+import 'catisol-ui/dist/assets/entry.css';
 
-import './assets/main.css'
-
-createApp(App).use(catisol).mount('#app')
+createApp(App).use(catisol).mount('#app');
 ```
 
 
