@@ -1,63 +1,54 @@
 /// <reference types="vitest" />
-import { defineConfig } from "vite";
-import vue from "@vitejs/plugin-vue";
-import vueJsx from '@vitejs/plugin-vue-jsx'
-import { presetUno, presetAttributify, presetIcons } from "unocss";
-import Unocss from './config/unocss'
+import { defineConfig } from 'vite';
+import vue from '@vitejs/plugin-vue';
+import vueJsx from '@vitejs/plugin-vue-jsx';
+import { presetUno, presetAttributify, presetIcons } from 'unocss';
+import Unocss from './config/unocss';
 
 // https://vitejs.dev/config/
 
-const rollupOptions = {
-
-    external: ["vue", "vue-router"],
-    output: {
-        globals: {
-            vue: "Vue",
-        },
-    }
-};
-
-
 export default defineConfig({
-    // 添加模式配置
-    build: {
-        cssCodeSplit: true,   // 追加
-        rollupOptions,
-        minify: false,
-        lib: {
-            entry: "./src/entry.ts",
-            name: "CatIsolUI",
-            fileName: "catisol-ui",
-            // 导出模块格式
-            formats: ["esm", "umd", "iife"],
-        },
-    },
-    test: {
-        global: true,
-        environment: 'happy-dom',
-        // 支持tsx组件
-        transformMode: {
-            web: [/.[tj]sx$/]
-        },
-        coverage: {
-            reporter: ['text', 'json', 'html'],
-        },
-    },
-    server: {
-        hmr: {
-            overlay: false
-        }
-    },
-    plugins: [
-        // 添加UnoCSS插件
-        Unocss({
-            presets: [presetUno(), presetAttributify(), presetIcons()],
-        }),
-        // 添加JSX插件
-        vueJsx({
-
-        }),
-        Unocss(),
-        vue()],
-
+	build: {
+		cssCodeSplit: true,
+		lib: {
+			entry: './src/entry.ts',
+			name: 'CatIsolUI',
+			fileName: 'catisol-ui', // 设置打包后的文件名为"catisol-ui"
+			formats: [ 'esm', 'umd', 'iife' ]
+		},
+		rollupOptions: {
+			// 移除assets文件夹下的哈希值
+			output: {
+				assetFileNames:'assets/[name][extname]',
+				globals: {
+					vue: 'Vue'
+				}
+			}
+		}
+	},
+	test: {
+		global: true,
+		// 设置支持tsx和jsx组件
+		transformMode: {
+			tsx: 'jsx'
+		},
+		coverage: {
+			reporter: [ 'text', 'json', 'html' ]
+		},
+		// 设置测试环境
+		environment: 'happy-dom'
+	},
+	server: {
+		hmr: {
+			overlay: false
+		}
+	},
+	plugins: [
+		// 添加UnoCSS和JSX插件
+		Unocss({
+			presets: [ presetUno(), presetAttributify(), presetIcons() ]
+		}),
+		vueJsx(),
+		vue()
+	]
 });
