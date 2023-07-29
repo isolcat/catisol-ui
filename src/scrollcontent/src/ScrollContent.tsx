@@ -1,5 +1,5 @@
 import { defineComponent } from 'vue'
-import './ScrollContent.less'
+import './ScrollContent.css'
 
 export default  defineComponent({
   name: 'CScrollContent',
