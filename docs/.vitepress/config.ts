@@ -49,6 +49,12 @@ export default defineConfig({
 					{ text: 'Textarea 文本域', link: '/components/Textarea/textarea' },
 					{ text: 'Select 选择器', link: '/components/Select/select' }
 				]
+			},
+			{
+				text: '数据展示',
+				items: [
+					{ text: 'ScrollContent 内容滚动框', link: '/components/ScrollContent/scrollcontent' },
+				]
 			}
 		]
 	},
