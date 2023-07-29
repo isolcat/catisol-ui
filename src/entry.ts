@@ -11,9 +11,10 @@ import Switch from './switch';
 import Textarea from './textarea';
 import Upload from './upload';
 import Select from './select';
+import ScrollContent from './scrollcontent';
 
 // 导出单独组件
-export { MyButton, SFCButton, JSXButton, Input, Link, CheckBox, Avatar, Textarea, Upload, Select };
+export { MyButton, SFCButton, JSXButton, Input, Link, CheckBox, Avatar, Textarea, Upload, Select, ScrollContent };
 
 // 编写一个插件，实现一个install方法
 
@@ -31,5 +32,6 @@ export default {
 		app.component(Textarea.name, Textarea);
 		app.component(Upload.name, Upload);
 		app.component(Select.name, Select);
+		app.component(ScrollContent.name, ScrollContent);
 	}
 };

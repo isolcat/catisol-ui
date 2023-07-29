@@ -1,0 +1,40 @@
+.scroll-content-box {
+    max-width: 15em;
+    border: 1px solid #ccc;
+    border-radius: 0.6rem;
+  
+    .scroll-wrap {
+      max-width: 100%;
+      display: inline-block;
+      vertical-align: top;
+      white-space: nowrap;
+      overflow: hidden;
+  
+      .scroll-item {
+        animation: scroll linear 2s alternate infinite;
+        float: left;
+      }
+    }
+  }
+  
+  @keyframes scroll {
+    0% {
+      margin-left: 0;
+      transform: translateX(0);
+    }
+  
+    10% {
+      margin-left: 0;
+      transform: translateX(0);
+    }
+  
+    90% {
+      margin-left: 100%;
+      transform: translateX(-100%);
+    }
+  
+    100% {
+      margin-left: 100%;
+      transform: translateX(-100%);
+    }
+  }
