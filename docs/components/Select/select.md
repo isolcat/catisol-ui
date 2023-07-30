@@ -27,6 +27,10 @@ const selection = ref('')
 ## 可搜索
 
 <CSelect filterOn v-model="selection" :option="['小明', '小刚', '小红']" />
+ <C-card>
+    <template #header>this is header</template>
+    this is card content.
+  </C-card>
 
 ::: details 点击展开
 

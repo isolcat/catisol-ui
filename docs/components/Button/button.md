@@ -4,11 +4,11 @@
 ## 按钮类型
 
 <div style="margin-bottom:20px;">
-    <CButton color="blue">Primary</CButton>
-    <CButton color="green">Success</CButton>
-    <CButton color="gray">Info</CButton>
-    <CButton color="yellow">Warning</CButton>
-    <CButton color="red">Danger</CButton>
+    <CButton type="primary">Primary</CButton>
+    <CButton type="success">Success</CButton>
+    <CButton type="info">Info</CButton>
+    <CButton type="warning">Warning</CButton>
+    <CButton type="danger">Danger</CButton>
 </div>
 
 <details>
@@ -16,11 +16,11 @@
 
 ```vue
 <template>
-    <CButton color="blue">Primary</CButton>
-    <CButton color="green">Success</CButton>
-    <CButton color="gray">Info</CButton>
-    <CButton color="yellow">Warning</CButton>
-    <CButton color="red">Danger</CButton>
+    <CButton type="primary">Primary</CButton>
+    <CButton type="success">Success</CButton>
+    <CButton type="info">Info</CButton>
+    <CButton type="warning">Warning</CButton>
+    <CButton type="danger">Danger</CButton>
 </template>
 ```
 
@@ -29,7 +29,7 @@
 ## 次要按钮
 
  <div style="margin-bottom:20px;">
-    <CButton color="blue" plain>Primary</CButton>
+    <CButton type="primary" plain>Primary</CButton>
     <CButton color="green" plain>Success</CButton>
     <CButton color="gray" plain>Info</CButton>
     <CButton color="yellow" plain>Waring</CButton>
@@ -41,11 +41,11 @@
 
 ```vue
 <template>
-    <CButton color="blue" plain>Primary</CButton>
-    <CButton color="green" plain>Success</CButton>
-    <CButton color="gray" plain>Info</CButton>
-    <CButton color="yellow" plain>Waring</CButton>
-    <CButton color="red" plain>Danger</CButton>
+    <CButton type="primary" plain>Primary</CButton>
+    <CButton type="success" plain>Success</CButton>
+    <CButton type="info" plain>Info</CButton>
+    <CButton type="warning" plain>Warning</CButton>
+    <CButton type="danger" plain>Danger</CButton>
 </template>
 ```
 

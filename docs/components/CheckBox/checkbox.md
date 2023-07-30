@@ -4,6 +4,17 @@
 
 ## 复选框尺寸
 
+<script setup>
+import { ref } from 'vue'
+const show1 = ref(false)
+const onOpenModal = () => {
+  show1.value = !show1.value
+}
+</script>
+<template>
+  <ik-button @click="onOpenModal">打开 modal</ik-button>
+  <CModal :visible="show1" @click-mask="onOpenModal"> modal contents ... </CModal>
+</template>
 
 <div style="display: flex">
     <Checkbox   size="small" text="Small"/><Checkbox   size="medium" shape="circle" text="Medium"/>
