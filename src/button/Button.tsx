@@ -42,7 +42,6 @@ export const props = {
     default: false
   }
 };
-
 export default defineComponent({
   name: 'CButton',
   props,
