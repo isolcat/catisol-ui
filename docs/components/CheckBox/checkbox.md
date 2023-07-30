@@ -4,7 +4,6 @@
 
 ## 复选框尺寸
 
-
 <div style="display: flex">
     <Checkbox   size="small" text="Small"/><Checkbox   size="medium" shape="circle" text="Medium"/>
     <Checkbox   size="large" text="Large"/>
