@@ -10,6 +10,23 @@ const guideSidebar = [
 		]
 	}
 ];
+const project = [
+	{
+		text: '项目',
+		items: [
+			{
+				text: 'babel-plugin-testdev',
+				link: 'https://github.com/isolcat/babel-plugin-testdev'
+			},{
+				text:'isolcat-cli',
+				link:'https://github.com/isolcat/isolcat-cli'
+			},{
+				text:'JustRead',
+				link:'https://github.com/isolcat/JustRead'
+			}
+		]
+	}
+];
 
 export default defineConfig({
 	title: 'CatIsol-UI',
@@ -24,7 +41,8 @@ export default defineConfig({
 		],
 		nav: [
 			{ text: '指南', items: guideSidebar },
-			{ text: '组件', link: '/components/Button/button', activeMatch: '/components/Button/' }
+			{ text: '组件', link: '/components/Button/button', activeMatch: '/components/Button/' },
+			{ text: '周边', items: project }
 		],
 		sidebar: [
 			{
@@ -52,9 +70,7 @@ export default defineConfig({
 			},
 			{
 				text: '数据展示',
-				items: [
-					{ text: 'ScrollContent 内容滚动框', link: '/components/ScrollContent/scrollcontent' },
-				]
+				items: [ { text: 'ScrollContent 内容滚动框', link: '/components/ScrollContent/scrollcontent' } ]
 			}
 		]
 	},
