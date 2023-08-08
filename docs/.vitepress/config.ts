@@ -42,7 +42,7 @@ export default defineConfig({
 		nav: [
 			{ text: '指南', items: guideSidebar },
 			{ text: '组件', link: '/components/Button/button', activeMatch: '/components/Button/' },
-			{ text: '周边', items: project }
+			{ text: '生态系统', items: project }
 		],
 		sidebar: [
 			{
