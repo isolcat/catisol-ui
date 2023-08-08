@@ -6,6 +6,10 @@ const guideSidebar = [
 			{
 				text: '快速开始',
 				link: '/guide/'
+			},
+			{
+				text: '为什么选择它',
+				link: '/guide/why'
 			}
 		]
 	}
@@ -17,12 +21,14 @@ const project = [
 			{
 				text: 'babel-plugin-testdev',
 				link: 'https://github.com/isolcat/babel-plugin-testdev'
-			},{
-				text:'isolcat-cli',
-				link:'https://github.com/isolcat/isolcat-cli'
-			},{
-				text:'JustRead',
-				link:'https://github.com/isolcat/JustRead'
+			},
+			{
+				text: 'isolcat-cli',
+				link: 'https://github.com/isolcat/isolcat-cli'
+			},
+			{
+				text: 'JustRead',
+				link: 'https://github.com/isolcat/JustRead'
 			}
 		]
 	}
@@ -47,7 +53,7 @@ export default defineConfig({
 		sidebar: [
 			{
 				text: '入门',
-				items: [ { text: '快速上手', link: '/guide/index' } ]
+				items: [ { text: '快速上手', link: '/guide/index' }, { text: '为什么选择它', link: '/guide/why' } ]
 			},
 			{
 				text: '组件',
