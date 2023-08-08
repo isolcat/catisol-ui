@@ -15,10 +15,3 @@ import 'catisol-ui/dist/assets/entry.css';
 
 createApp(App).use(catisol).mount('#app');
 ```
-
-
-## 为什么选择该框架
-- ⚡`UnoCSS`原子化引擎，让该组件库具有着其他组件库无法比拟的轻量与高性能
-- 😶‍🌫️使用`vitest`进行单元测试，无需担心组件库的稳定性和可靠性
-- 🛠️`tsx`构建组件库，源码可读性强，维护性强
-- 😽使用`vite`进行打包，组件库引入的体积无需担心
