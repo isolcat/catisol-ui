@@ -15,6 +15,3 @@
 - 🎨 UnoCSS - the instant on-demand atomic CSS engine
 - 🌍 I18n ready
 - 🚘 CI/CD with GithubActions
-
-## Preview
-![image.png](https://ldbbs.ldmnq.com/bbs/topic/attachment/2023-2/ef5c644a-2b02-48e7-ac91-3bb6398d5f0e.png)
