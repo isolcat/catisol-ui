@@ -1,0 +1,45 @@
+/* Badge.css */
+
+.badge-wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+.badge {
+  background-color: #007bff; /* 默认蓝色 */
+  color: #fff;
+  border-radius: 5px; /* 圆角 */
+  padding: 0.2rem 0.5rem;
+  font-size: 0.8rem;
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.badge-success {
+  background-color: #28a745; /* 绿色 */
+}
+
+.badge-prompts {
+  background-color: #ffc107; /* 黄色 */
+}
+
+.badge-warnings {
+  background-color: #dc3545; /* 红色 */
+}
+
+.badge-small {
+  padding: 0.1rem 0.3rem;
+  font-size: 0.7rem;
+}
+
+.badge-large {
+  padding: 0.3rem 0.7rem;
+  font-size: 1rem;
+}
+
+.badge-round {
+  border-radius: 11px
+}
