@@ -1,4 +1,4 @@
-import CatIsolUI from '../../../src/entry'
+import CatIsolUI from '../../../packages/entry.ts'
 import Theme from 'vitepress/theme'
 import './style/var.css'
 

@@ -11,7 +11,7 @@ export default defineConfig({
 	build: {
 		cssCodeSplit: true,
 		lib: {
-			entry: './src/entry.ts',
+			entry: './packages/entry.ts',
 			name: 'CatIsolUI',
 			fileName: 'catisol-ui', // 设置打包后的文件名为"catisol-ui"
 			formats: [ 'esm', 'umd', 'iife' ]

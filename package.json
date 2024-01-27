@@ -3,7 +3,7 @@
     "version": "0.9.92",
     "description": "",
     "main": "./dist/catisol-ui.esm.js",
-    "style": "./dist/assets/entry.284eadfc.css",
+    "style": "./dist/assets/entry.css",
     "files": [
         "dist"
     ],
