@@ -72,7 +72,8 @@ export default defineConfig({
 					{ text: 'Input 输入框', link: '/components/Input/input' },
 					{ text: 'Switch 开关', link: '/components/Switch/switch' },
 					{ text: 'Textarea 文本域', link: '/components/Textarea/textarea' },
-					{ text: 'Select 选择器', link: '/components/Select/select' }
+					{ text: 'Select 选择器', link: '/components/Select/select' },
+					{ text: 'Tabs 选项卡', link: '/components/Tabs/tabs' }
 				]
 			},
 			{

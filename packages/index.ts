@@ -1,4 +1,4 @@
-import { createApp } from 'vue/dist/vue.esm-browser';
+import { createApp,ref  } from 'vue/dist/vue.esm-browser';
 import CatIsolUI from './entry';
 import 'uno.css';
 import '@iconify-json/ic';
@@ -61,7 +61,22 @@ createApp({
   <CBadge type="success" size="small" round content="New">
       <CButton>Button</CButton>
   </CBadge>
-  `
+  <CTabs v-model="activeTab">
+  <div name="tab1" title="Tab 1">Content for Tab 1</div>
+  <div name="tab2" title="Tab 2">Content for Tab 2</div>
+  <div name="tab3" title="Tab 3">Content for Tab 3</div>
+</CTabs>
+  `,
+  setup() {
+    const activeTab = ref('tab1'); // 创建一个响应式的属性来存储当前激活的标签
+
+    // 这里可以添加其他响应式属性或方法
+
+    return {
+        activeTab
+        // 返回其他响应式属性或方法
+    };
+}
 })
 	.use(CatIsolUI)
 	.mount('#app');
