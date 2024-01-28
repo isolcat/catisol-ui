@@ -1,0 +1,32 @@
+/* 基础样式 */
+.ctabs {
+  font-family: Arial, sans-serif;
+  border: 1px solid #ddd;
+}
+
+/* 导航样式 */
+.tabs-nav {
+  display: flex;
+  background-color: #f5f5f5;
+  border-bottom: 1px solid #ddd;
+}
+
+.tab-item {
+  padding: 10px 15px;
+  cursor: pointer;
+  border-radius: 4px 4px 0 0;
+  transition: background-color 0.3s;
+}
+
+/* 激活的标签样式 */
+.tab-item.active {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-bottom: none;
+}
+
+/* 内容区域样式 */
+.tabs-content {
+  padding: 15px;
+  border-top: none;
+}
