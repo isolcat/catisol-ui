@@ -53,7 +53,7 @@ export default defineConfig({
 		sidebar: [
 			{
 				text: '入门',
-				items: [ { text: '快速上手', link: '/guide/index' }, { text: '为什么选择它', link: '/guide/why' } ]
+				items: [{ text: '快速上手', link: '/guide/index' }, { text: '为什么选择它', link: '/guide/why' }]
 			},
 			{
 				text: '组件',
@@ -61,7 +61,8 @@ export default defineConfig({
 					{ text: 'Button 按钮', link: '/components/Button/button' },
 					{ text: 'Link 链接', link: '/components/Link/link' },
 					{ text: 'Title 标题', link: '/components/Title/title' },
-					{ text: 'Avatar 头像', link: '/components/Avatar/avatar' }
+					{ text: 'Avatar 头像', link: '/components/Avatar/avatar' },
+					{ text: 'Badge 徽章', link: '/components/Badge/badge' }
 				]
 			},
 			{
@@ -76,11 +77,11 @@ export default defineConfig({
 			},
 			{
 				text: '数据展示',
-				items: [ { text: 'ScrollContent 内容滚动框', link: '/components/ScrollContent/scrollcontent' } ]
+				items: [{ text: 'ScrollContent 内容滚动框', link: '/components/ScrollContent/scrollcontent' }]
 			}
 		]
 	},
 	markdown: {
-		config: (md) => {}
+		config: (md) => { }
 	}
 });
