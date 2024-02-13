@@ -1,0 +1,75 @@
+/* CTable.css */
+.c-table {
+  width: 100%;
+  overflow: auto;
+}
+
+.c-table table {
+  width: 100%;
+  border-collapse: collapse;
+  box-sizing: border-box;
+  background-color: #fff;
+}
+
+.c-table thead {
+  display: table-header-group;
+  vertical-align: middle;
+  border-color: inherit;
+}
+
+.c-table tr {
+  display: table-row;
+  vertical-align: inherit;
+  border-color: inherit;
+}
+
+.c-table tr:hover {
+  background-color: #f5f7fa !important;
+}
+
+.c-table th,
+.c-table td {
+  padding: 8px 12px;
+  text-align: left;
+  line-height: 20px;
+  color: #646468;
+  font-size: 14px;
+  border-bottom: 1px none #f0f0f0;
+}
+
+/* .border 类添加边框样式，确保在border属性为true时应用 */
+.c-table.border thead th {
+  border-top: 1px solid #f0f0f0;
+}
+
+.c-table.border th,
+.c-table.border td {
+  border: 1px solid #f0f0f0;
+  border-top: 0;
+}
+
+.c-table.border th:last-child,
+.c-table.border td:last-child {
+  border-right: 1px solid #f0f0f0;
+}
+
+/* 调整滚动条样式 */
+.c-table::-webkit-scrollbar {
+  visibility: hidden;
+  width: 5px;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.c-table:hover::-webkit-scrollbar {
+  visibility: visible;
+}
+
+.c-table:hover::-webkit-scrollbar-thumb {
+  background-color: #dddee0;
+  border-radius: 5px;
+}
+
+.c-table:hover::-webkit-scrollbar-track {
+  background-color: #fff;
+}
