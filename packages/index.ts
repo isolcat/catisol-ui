@@ -66,14 +66,42 @@ createApp({
   <div name="tab2" title="Tab 2">Content for Tab 2</div>
   <div name="tab3" title="Tab 3">Content for Tab 3</div>
 </CTabs>
+<br />
+<!-- 纯净的Table，无边框无斑马纹 -->
+<CTable :data="tableData" class="table-example" />
+<br />
+<!-- 启用斑马纹效果的Table -->
+<CTable :data="tableData" :stripe="true" class="table-example" />
+<br />
+
+<!-- 带边框的Table -->
+<CTable :data="tableData" border class="table-example" />
+<br />
+
+<!-- 设置高度和最大高度，展示滚动效果的Table -->
+<CTable :data="tableData" :height="200" :maxHeight="500" />
   `,
   setup() {
     const activeTab = ref('tab1'); // 创建一个响应式的属性来存储当前激活的标签
-
+    const tableData =  [
+      { id: 1, name: 'Item 1', price: '$100' },
+      { id: 2, name: 'Item 2', price: '$200' },
+      // 假设更多数据，足够显示滚动效果
+      { id: 3, name: 'Item 3', price: '$300' },
+      { id: 4, name: 'Item 4', price: '$400' },
+      { id: 5, name: 'Item 5', price: '$500' },
+      { id: 6, name: 'Item 6', price: '$600' },
+      { id: 7, name: 'Item 7', price: '$700' },
+      { id: 8, name: 'Item 8', price: '$800' },
+      { id: 9, name: 'Item 9', price: '$900' },
+      { id: 10, name: 'Item 10', price: '$1000' },
+      // ...更多数据
+    ]
     // 这里可以添加其他响应式属性或方法
 
     return {
-        activeTab
+        activeTab,
+        tableData
         // 返回其他响应式属性或方法
     };
 }
