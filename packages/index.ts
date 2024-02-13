@@ -68,7 +68,7 @@ createApp({
 </CTabs>
 <br />
 <!-- 纯净的Table，无边框无斑马纹 -->
-<CTable :data="tableData" class="table-example" />
+<CTable :data="tableData" />
 <br />
 <!-- 启用斑马纹效果的Table -->
 <CTable :data="tableData" :stripe="true" class="table-example" />

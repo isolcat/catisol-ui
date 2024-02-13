@@ -78,7 +78,10 @@ export default defineConfig({
 			},
 			{
 				text: '数据展示',
-				items: [{ text: 'ScrollContent 内容滚动框', link: '/components/ScrollContent/scrollcontent' }]
+				items: [
+					{ text: 'Table 表格', link: '/components/Table/table' },
+					{ text: 'ScrollContent 内容滚动框', link: '/components/ScrollContent/scrollcontent' }
+				]
 			}
 		]
 	},
