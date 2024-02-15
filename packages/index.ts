@@ -71,7 +71,7 @@ createApp({
 <CTable :data="tableData" />
 <br />
 <!-- 启用斑马纹效果的Table -->
-<CTable :data="tableData" :stripe="true" class="table-example" />
+<CTable :data="tableData" :stripe="true" />
 <br />
 
 <!-- 带边框的Table -->
@@ -80,10 +80,12 @@ createApp({
 
 <!-- 设置高度和最大高度，展示滚动效果的Table -->
 <CTable :data="tableData" :height="200" :maxHeight="500" />
+<br />
+<CTable :data="tableData" :stripe="true" :border="true" :itemsPerPage="2" />
   `,
   setup() {
     const activeTab = ref('tab1'); // 创建一个响应式的属性来存储当前激活的标签
-    const tableData =  [
+    const tableData =  ref([
       { id: 1, name: 'Item 1', price: '$100' },
       { id: 2, name: 'Item 2', price: '$200' },
       // 假设更多数据，足够显示滚动效果
@@ -96,7 +98,7 @@ createApp({
       { id: 9, name: 'Item 9', price: '$900' },
       { id: 10, name: 'Item 10', price: '$1000' },
       // ...更多数据
-    ]
+    ])
     // 这里可以添加其他响应式属性或方法
 
     return {

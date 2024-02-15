@@ -1,3 +1,3 @@
-import Table from './table'
+import Table from './table.vue'
 
 export default Table
