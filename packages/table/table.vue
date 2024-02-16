@@ -34,7 +34,7 @@ const style = computed(() => {
 </script>
 
 <template>
-  <div class="r-table" :class="{ border: border }" :style="style">
+  <div class="c-table" :class="{ border: border }" :style="style">
     <table>
       <thead>
         <tr>
@@ -52,13 +52,13 @@ const style = computed(() => {
 </template>
 
 <style>
-.r-table {
+.c-table {
   width: 100%;
   overflow: auto;
   border-style: none;
 }
 
-.r-table table {
+.c-table table {
   width: 100%;
   border-radius: 2px;
   box-sizing: border-box;
@@ -66,24 +66,24 @@ const style = computed(() => {
   background-color: #fff;
 }
 
-.r-table table thead {
+.c-table table thead {
   display: table-header-group;
   vertical-align: middle;
   border-color: inherit;
 }
 
-.r-table table tr {
+.c-table table tr {
   display: table-row;
   vertical-align: inherit;
   border-color: inherit;
 }
 
-.r-table table tr:hover {
+.c-table table tr:hover {
   background-color: #f5f7fa !important;
 }
 
-.r-table table tr th,
-.r-table table tr td {
+.c-table table tr th,
+.c-table table tr td {
   padding: 8px 12px;
   box-sizing: border-box;
   text-align: left;
@@ -94,23 +94,23 @@ const style = computed(() => {
   border-right: 0;
 }
 
-.r-table::-webkit-scrollbar {
+.c-table::-webkit-scrollbar {
   visibility: hidden;
   width: 5px;
   scrollbar-width: none;
   -ms-overflow-style: none;
 }
 
-.r-table:hover::-webkit-scrollbar {
+.c-table:hover::-webkit-scrollbar {
   height: 5px;
 }
 
-.r-table:hover::-webkit-scrollbar-thumb {
+.c-table:hover::-webkit-scrollbar-thumb {
   background-color: #dddee0;
   -webkit-border-radius: 5px;
 }
 
-.r-table:hover::-webkit-scrollbar-track {
+.c-table:hover::-webkit-scrollbar-track {
   background-color: #fff;
 }
 
