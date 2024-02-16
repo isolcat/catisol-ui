@@ -1,6 +1,10 @@
 <script setup lang="ts">
 import { defineProps, ref, onMounted, withDefaults } from 'vue'
-import type { messageProps } from './type'
+export interface messageProps {
+  message?: string
+  type: 'info' | 'success' | 'error' | 'warn'
+  icon?: string
+}
 
 defineOptions({
   name: 'rMessage'
