@@ -82,6 +82,12 @@ export default defineConfig({
 					{ text: 'Table 表格', link: '/components/Table/table' },
 					{ text: 'ScrollContent 内容滚动框', link: '/components/ScrollContent/scrollcontent' }
 				]
+			},
+			{
+				text: '反馈组件',
+				items: [
+					{ text: 'Message 消息提示', link: '/components/Message/message' },
+				]
 			}
 		]
 	},

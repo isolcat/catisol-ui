@@ -1,10 +1,11 @@
-import { createApp,ref  } from 'vue/dist/vue.esm-browser';
+import { createApp, ref } from 'vue/dist/vue.esm-browser';
 import CatIsolUI from './entry';
 import 'uno.css';
 import '@iconify-json/ic';
+import Message from './message/index';
 
 createApp({
-	template: `
+  template: `
     <div>
         <CButton disabled>普通按钮</CButton>
     </div>
@@ -82,10 +83,20 @@ createApp({
 <CTable :data="tableData" :height="200" :maxHeight="500" />
 <br />
 <CTable :data="tableData" :stripe="true" :border="true" :itemsPerPage="2" />
+<CButton @click="messageOpen1">success</CButton>
+<CButton @click="messageOpen2">success</CButton>
+<div style="margin-bottom:20px;">
+    <CButton type="primary">Primary</CButton>
+    <CButton type="success" @click="messageOpen1">Success</CButton>
+    <CButton type="info">Info</CButton>
+    <CButton type="warning" @click="messageOpen2">Warning</CButton>
+    <CButton type="danger">Danger</CButton>
+</div>
+
   `,
   setup() {
     const activeTab = ref('tab1'); // 创建一个响应式的属性来存储当前激活的标签
-    const tableData =  ref([
+    const tableData = ref([
       { id: 1, name: 'Item 1', price: '$100' },
       { id: 2, name: 'Item 2', price: '$200' },
       // 假设更多数据，足够显示滚动效果
@@ -99,14 +110,29 @@ createApp({
       { id: 10, name: 'Item 10', price: '$1000' },
       // ...更多数据
     ])
+    const messageOpen1 = () => {
+      Message({
+        message: 'this is a success message.',
+        type: 'success'
+      })
+    }
+    const messageOpen2 = () => {
+      Message({
+        message: 'this is a warn message.',
+        type: 'warn',
+        timeout: 5000
+      })
+    }
     // 这里可以添加其他响应式属性或方法
 
     return {
-        activeTab,
-        tableData
-        // 返回其他响应式属性或方法
+      activeTab,
+      tableData,
+      messageOpen1,
+      messageOpen2
+      // 返回其他响应式属性或方法
     };
-}
+  }
 })
-	.use(CatIsolUI)
-	.mount('#app');
+  .use(CatIsolUI)
+  .mount('#app');
