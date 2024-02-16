@@ -13,6 +13,14 @@ const messageOpen2 = () => {
         timeout: 5000
       })
     }
+     const messageOpen3 = () => {
+      Message({
+        message: 'this is a warn message.',
+        type: 'warn',
+        icon: 'search',
+        timeout: 5000
+      })
+    }
 </script>
 
 # Message 消息提示
@@ -52,6 +60,30 @@ const openError = () => Message({ message: '发生错误', type: 'error' });
 ```
 </details>
 
+## 自定义图标
+支持自定义图标显示，通过icon属性传入图标类名
+
+<div style="margin-bottom:20px;">
+    <CButton @click="messageOpen3" icon="search">自定义图标</CButton>
+</div>
+<details>
+<summary>展开查看</summary>
+
+```vue
+<template>
+    <CButton @click="messageOpen3" icon="search">自定义图标</CButton>
+</template>
+
+<script setup>
+import { ref } from 'vue';
+import Message from '路径/to/Message';
+
+const openCustomIcon = () => Message({ message: '自定义图标消息', type: 'info', icon: '自定义图标类名' });
+</script>
+```
+
+</details>
+
 ## 持续时间
 可以自定义消息显示的持续时间，通过timeout属性配置（单位：毫秒
 
@@ -83,6 +115,7 @@ const messageOpen2 = () => {
 </details>
 
 ## Message 函数参数
+
 | 属性名  | 描述             | 类型   | 可选值                                     | 默认值   |
 | ------- | ---------------- | ------ | ------------------------------------------ | -------- |
 | message | 消息文字内容     | string | —                                          | —        |

@@ -1,32 +1,15 @@
 <script setup lang="ts">
 import { defineProps, ref, onMounted, withDefaults } from 'vue'
-export interface messageProps {
+import 'uno.css';
+
+export interface MessageProps {
   message?: string
   type: 'info' | 'success' | 'error' | 'warn'
-  icon?: string
+  icon?: string // 已经正确定义，用于接收图标
 }
 
-defineOptions({
-  name: 'rMessage'
-})
-
-const props = withDefaults(defineProps<messageProps>(), {
+const props = withDefaults(defineProps<MessageProps>(), {
   type: 'info'
-})
-
-const iconStyle = ref({
-  info: {
-    icon: props.icon || 'm-icon-prompt-filling'
-  },
-  error: {
-    icon: props.icon || 'm-icon-delete-filling'
-  },
-  success: {
-    icon: props.icon || 'm-icon-success'
-  },
-  warn: {
-    icon: props.icon || 'm-icon-warning'
-  }
 })
 
 const showValue = ref(false)
@@ -43,7 +26,8 @@ onMounted(() => {
       type === 'success' ? 'color-success' : '',
       type === 'warn' ? 'color-warn' : ''
     ]">
-      <i :class="iconStyle[type].icon"></i>
+      <!-- 如果提供了icon属性，就渲染对应的图标 -->
+      <i :class="`i-ic-baseline-${props.icon}`" v-if="props.icon"></i>
       <span class="message-slot">{{ message }}</span>
     </div>
   </Transition>

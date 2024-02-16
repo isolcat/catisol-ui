@@ -4,6 +4,7 @@ import vue from '@vitejs/plugin-vue';
 import vueJsx from '@vitejs/plugin-vue-jsx';
 import { presetUno, presetAttributify, presetIcons } from 'unocss';
 import Unocss from './config/unocss';
+import UnocssIcons from '@unocss/preset-icons'
 
 // https://vitejs.dev/config/
 
@@ -14,12 +15,12 @@ export default defineConfig({
 			entry: './packages/entry.ts',
 			name: 'CatIsolUI',
 			fileName: 'catisol-ui', // 设置打包后的文件名为"catisol-ui"
-			formats: [ 'esm', 'umd', 'iife' ]
+			formats: ['esm', 'umd', 'iife']
 		},
 		rollupOptions: {
 			// 移除assets文件夹下的哈希值
 			output: {
-				assetFileNames:'assets/[name][extname]',
+				assetFileNames: 'assets/[name][extname]',
 				globals: {
 					vue: 'Vue'
 				}
@@ -33,7 +34,7 @@ export default defineConfig({
 			tsx: 'jsx'
 		},
 		coverage: {
-			reporter: [ 'text', 'json', 'html' ]
+			reporter: ['text', 'json', 'html']
 		},
 		// 设置测试环境
 		environment: 'happy-dom'
@@ -46,7 +47,13 @@ export default defineConfig({
 	plugins: [
 		// 添加UnoCSS和JSX插件
 		Unocss({
-			presets: [ presetUno(), presetAttributify(), presetIcons() ]
+			presets: [UnocssIcons({
+				// 其他选项
+				prefix: 'i-',
+				extraProperties: {
+					display: 'inline-block'
+				}
+			}), presetUno(), presetAttributify(), presetIcons()]
 		}),
 		vueJsx(),
 		vue()

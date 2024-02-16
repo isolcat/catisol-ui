@@ -84,7 +84,7 @@ createApp({
 <br />
 <CTable :data="tableData" :stripe="true" :border="true" :itemsPerPage="2" />
 <CButton @click="messageOpen1">success</CButton>
-<CButton @click="messageOpen2">success</CButton>
+<CButton @click="messageOpen2" icon="edit">success</CButton>
 <div style="margin-bottom:20px;">
     <CButton type="primary">Primary</CButton>
     <CButton type="success" @click="messageOpen1">Success</CButton>
@@ -92,7 +92,6 @@ createApp({
     <CButton type="warning" @click="messageOpen2">Warning</CButton>
     <CButton type="danger">Danger</CButton>
 </div>
-
   `,
   setup() {
     const activeTab = ref('tab1'); // 创建一个响应式的属性来存储当前激活的标签
@@ -120,6 +119,7 @@ createApp({
       Message({
         message: 'this is a warn message.',
         type: 'warn',
+        icon: 'i-logos-vue text-3xl',
         timeout: 5000
       })
     }
