@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { defineProps, ref, onMounted } from 'vue'
+import { defineProps, ref, onMounted, withDefaults } from 'vue'
 import type { messageProps } from './type'
 
 defineOptions({
@@ -33,16 +33,12 @@ onMounted(() => {
 
 <template>
   <Transition name="slide-fade">
-    <div
-      class="message"
-      v-show="showValue"
-      :class="[
-        type === 'info' ? 'color-info' : '',
-        type === 'error' ? 'color-error' : '',
-        type === 'success' ? 'color-success' : '',
-        type === 'warn' ? 'color-warn' : ''
-      ]"
-    >
+    <div class="message" v-show="showValue" :class="[
+      type === 'info' ? 'color-info' : '',
+      type === 'error' ? 'color-error' : '',
+      type === 'success' ? 'color-success' : '',
+      type === 'warn' ? 'color-warn' : ''
+    ]">
       <i :class="iconStyle[type].icon"></i>
       <span class="message-slot">{{ message }}</span>
     </div>
@@ -101,5 +97,4 @@ div.slide-fade-leave-to {
   vertical-align: middle;
   font-size: 16px;
 }
-
 </style>
