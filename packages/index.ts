@@ -53,10 +53,6 @@ createApp({
   <CAvatar src="https://pic1.zhimg.com/v2-f28fb6bc6f0fe48c8554689a32e9dc77_xl.jpg?source=32738c0c"  shape="square" size="large"></CAvatar>
   <CAvatar src="https://pic1.zhimg.com/v2-f28fb6bc6f0fe48c8554689a32e9dc77_xl.jpg?source=32738c0c"  size="large"></CAvatar>
   <CAvatar src="https://pic1.zhimg.com/v2-f28fb6bc6f0fe48c8554689a32e9dc77_xl.jpg?source=32738c0c"  size="small"></CAvatar>
-  <CSwitch size="small" checked/>  
-  <CSwitch size="medium"/>  
-  <CSwitch size="large"/>  
-  <CSwitch size="large" disabled/>
   <CTextarea placeholder="Enter your text here" />
   <CTextarea maxLength="100" showWordLimit />
   <CBadge type="success" size="small" round content="New">
@@ -92,9 +88,17 @@ createApp({
     <CButton type="warning" @click="messageOpen2">Warning</CButton>
     <CButton type="danger">Danger</CButton>
 </div>
+<CSwitch v-model="switchState.basic" />
+<span>Status: {{ switchState.basic ? 'On' : 'Off' }}</span>
   `,
   setup() {
     const activeTab = ref('tab1'); // 创建一个响应式的属性来存储当前激活的标签
+    const switchState = ref({
+      basic: false,
+      disabled: true,
+      custom: false,
+      text: false,
+    })
     const tableData = ref([
       { id: 1, name: 'Item 1', price: '$100' },
       { id: 2, name: 'Item 2', price: '$200' },
