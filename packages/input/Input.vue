@@ -1,7 +1,17 @@
 <script setup lang="ts">
 import { ref, defineProps, defineEmits } from 'vue'
-import type { inputProps } from './instance'
 import 'uno.css';
+
+export interface inputProps {
+  modelValue?: string
+  placeholder?: string
+  disabled?: boolean
+  clearable?: boolean
+  showPassword?: boolean
+  leftIcon?: string
+  rightIcon?: string
+}
+
 
 
 defineOptions({
