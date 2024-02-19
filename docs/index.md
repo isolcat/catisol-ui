@@ -26,4 +26,7 @@ features:
   - icon: 🐱
     title: 静态类型检查
     details: 使用tsx构建组件
+  - icon: 🦾
+    title: AI赋能文档
+    details: 打造该组件库的专属ChatGPT
 ---

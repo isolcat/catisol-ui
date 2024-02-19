@@ -1,4 +1,4 @@
-import { defineConfig } from 'vitepress';
+import { defineConfig } from 'vitepress'
 const guideSidebar = [
 	{
 		text: '基础',
@@ -39,6 +39,9 @@ export default defineConfig({
 	themeConfig: {
 		logo: '/logo.png',
 		siteTitle: 'CatIsol-UI',
+		head: [
+			['link', { rel: 'icon', href: '/favicon.ico' }]
+		],
 		socialLinks: [
 			{
 				icon: 'github',

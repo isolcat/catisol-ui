@@ -1,44 +1,48 @@
 {
-    "name": "catisol-ui",
-    "version": "0.9.92",
-    "description": "",
-    "main": "./dist/catisol-ui.esm.js",
-    "style": "./dist/assets/entry.css",
-    "files": [
-        "dist"
-    ],
-    "scripts": {
-        "test": "vitest",
-        "coverage": "vitest run --coverage",
-        "build": "vite build",
-        "dev": "vite",
-        "docs:dev": "vitepress dev docs",
-        "docs:build": "vitepress build docs",
-        "docs:serve": "vitepress serve docs"
-    },
-    "keywords": [],
-    "author": "",
-    "license": "MIT",
-    "devDependencies": {
-        "@iconify-json/ic": "1.1.4",
-        "@vitejs/plugin-vue": "3.0.3",
-        "@vitejs/plugin-vue-jsx": "2.0.0",
-        "@vue/test-utils": "2.0.2",
-        "c8": "^7.13.0",
-        "happy-dom": "6.0.4",
-        "postcss": "^8.4.21",
-        "postcss-prefix-selector": "^1.16.0",
-        "unocss": "0.45.6",
-        "vite": "3.0.7",
-        "vitepress": "v1.0.0-alpha.31",
-        "vitest": "0.21.1"
-    },
-    "maintainers": [
-        "isolcat"
-    ],
-    "dependencies": {
-        "@unocss/vite": "^0.45.13",
-        "@vueuse/core": "^10.2.1",
-        "vue": "^3.3.4"
-    }
+  "name": "catisol-ui",
+  "version": "0.9.92",
+  "description": "",
+  "type": "module",
+  "main": "./dist/catisol-ui.esm.js",
+  "style": "./dist/assets/entry.css",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "test": "vitest",
+    "coverage": "vitest run --coverage",
+    "build": "vite build",
+    "dev": "vite",
+    "docs:dev": "vitepress dev docs",
+    "docs:build": "vitepress build docs",
+    "docs:serve": "vitepress serve docs",
+    "documate:upload": "documate upload"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "@documate/documate": "^0.2.1",
+    "@iconify-json/ic": "1.1.4",
+    "@vitejs/plugin-vue": "3.0.3",
+    "@vitejs/plugin-vue-jsx": "2.0.0",
+    "@vue/test-utils": "2.0.2",
+    "c8": "^7.13.0",
+    "happy-dom": "6.0.4",
+    "postcss": "^8.4.21",
+    "postcss-prefix-selector": "^1.16.0",
+    "unocss": "0.45.6",
+    "vite": "3.0.7",
+    "vitepress": "1.0.0-rc.31",
+    "vitest": "0.21.1"
+  },
+  "maintainers": [
+    "isolcat"
+  ],
+  "dependencies": {
+    "@documate/vue": "^0.3.1",
+    "@unocss/vite": "^0.45.13",
+    "@vueuse/core": "^10.2.1",
+    "vue": "^3.3.4"
+  }
 }
