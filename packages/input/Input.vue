@@ -10,16 +10,13 @@ export interface inputProps {
   showPassword?: boolean
   leftIcon?: string
   rightIcon?: string
+  size?: 'default' | 'large' | 'small' // 新增size属性
 }
-
-
 
 defineOptions({
   name: 'CInput'
 })
 
-// update 前缀会告诉父组件我要更新
-// const emit = defineEmits(['update:modelValue', 'focus', 'blur', 'input', 'change'])
 const emit = defineEmits<{
   'update:modelValue': [value: string]
   focus: [e: any]
@@ -30,53 +27,50 @@ const emit = defineEmits<{
 
 const props = defineProps<inputProps>()
 
-//input事件（当input的value值发生变化时就会触发）
+let isActive = ref(false)
 const input = (e: any) => {
   emit('update:modelValue', e.target.value)
   emit('input', e.target.value)
 }
 
-//change事件（当input失去焦点并且它的value值发生变化时触发）
 const change = (e: any) => {
   emit('change', e)
 }
 
-//获取焦点
-let isActive = ref(false)
 const focus = (e: any) => {
   isActive.value = true
   emit('focus', e)
 }
 
-//失去焦点
 const blur = (e: any) => {
   isActive.value = false
   emit('blur', e)
 }
 
-//清空输入框
 const clear = () => {
   emit('update:modelValue', '')
 }
 </script>
-
 <template>
-  <div class="r-input">
+  <div class="r-input" :class="`r-input-${props.size || 'default'}`">
     <div :class="[
       'r-input-wrapper',
+      `r-input-wrapper-${props.size || 'default'}`,
       { active: !props.disabled && isActive, disabled: props.disabled }
     ]">
       <i :class="`i-ic-baseline-${props.leftIcon}`" v-if="props.leftIcon" style="margin-right: 5px"></i>
-      <input :type="showPassword ? 'password' : 'text'" :value="modelValue" :disabled="disabled"
-        :placeholder="placeholder" :class="{ disabled: props.disabled }" @focus="focus" @blur="blur" @input="input"
+      <input :type="props.showPassword ? 'password' : 'text'" :value="props.modelValue" :disabled="props.disabled"
+        :placeholder="props.placeholder" :class="{ disabled: props.disabled }" @focus="focus" @blur="blur" @input="input"
         @change="change" />
-      <CButton icon="delete" plain v-if="props.clearable && modelValue && rightIcon === undefined" @click="clear"
+      <CButton icon="delete" plain v-if="props.clearable && props.modelValue && props.rightIcon === undefined" @click="clear"
         color="gray" round></CButton>
       <i :class="`i-ic-baseline-${props.rightIcon}`" v-if="props.rightIcon"></i>
     </div>
     <slot name="btn"></slot>
   </div>
 </template>
+
+
 
 <style>
 .r-input {
@@ -118,6 +112,17 @@ const clear = () => {
 .r-input .r-input-wrapper input.disabled {
   cursor: not-allowed;
   background-color: #f5f7fa;
+}
+.r-input-large .r-input-wrapper,
+.r-input-large .r-input-wrapper input {
+  height: 45px; /* 大尺寸高度 */
+  font-size: 18px; /* 大尺寸字体 */
+}
+
+.r-input-small .r-input-wrapper,
+.r-input-small .r-input-wrapper input {
+  height: 25px; /* 小尺寸高度 */
+  font-size: 12px; /* 小尺寸字体 */
 }
 
 .r-input .r-input-wrapper i {

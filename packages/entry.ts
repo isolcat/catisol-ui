@@ -15,9 +15,14 @@ import ScrollContent from './scrollcontent';
 import Badge from './badge';
 import Tabs from './tabs'
 import Table from './table'
+import Form from './form'
+import FormItem from './formitem'
+import Row from './row'
+import Col from './col'
+
 
 // 导出单独组件
-export { MyButton, SFCButton, JSXButton, Input, Link, CheckBox, Avatar, Textarea, Upload, Select, ScrollContent, Badge, Tabs, Table };
+export { MyButton, SFCButton, JSXButton, Input, Link, CheckBox, Avatar, Textarea, Upload, Select, ScrollContent, Badge, Tabs, Table, Form, FormItem, Row, Col };
 
 // 编写一个插件，实现一个install方法
 
@@ -39,5 +44,9 @@ export default {
 		app.component(Badge.name, Badge)
 		app.component(Tabs.name, Tabs)
 		app.component(Table.name, Table)
+		app.component(Form.name, Form)
+		app.component(FormItem.name, FormItem)
+		app.component(Col.name,Col)
+		app.component(Row.name,Row)
 	}
 };

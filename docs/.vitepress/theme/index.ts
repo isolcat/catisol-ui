@@ -1,10 +1,10 @@
 import CatIsolUI from '../../../packages/entry.ts'
 import Theme from 'vitepress/theme'
-import './style/var.css'
 import { h } from 'vue'
 import DefaultTheme from 'vitepress/theme'
 import Documate from '@documate/vue'
 import '@documate/vue/dist/style.css'
+import './style/var.css'
 
 export default {
     ...Theme,

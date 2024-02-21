@@ -62,6 +62,7 @@ export default defineConfig({
 				text: '组件',
 				items: [
 					{ text: 'Button 按钮', link: '/components/Button/button' },
+					{ text: 'Layout 布局', link: '/components/Layout/layout' },
 					{ text: 'Link 链接', link: '/components/Link/link' },
 					{ text: 'Title 标题', link: '/components/Title/title' },
 					{ text: 'Avatar 头像', link: '/components/Avatar/avatar' },
@@ -71,6 +72,7 @@ export default defineConfig({
 			{
 				text: '表单',
 				items: [
+					{ text: 'Form 表单', link: '/components/Form/form' },
 					{ text: 'CheckBox 复选框', link: '/components/CheckBox/checkbox' },
 					{ text: 'Input 输入框', link: '/components/Input/input' },
 					{ text: 'Switch 开关', link: '/components/Switch/switch' },
