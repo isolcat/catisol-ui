@@ -4,11 +4,15 @@ import vue from '@vitejs/plugin-vue';
 import vueJsx from '@vitejs/plugin-vue-jsx';
 import { presetUno, presetAttributify, presetIcons } from 'unocss';
 import Unocss from './config/unocss';
-import UnocssIcons from '@unocss/preset-icons'
 
 // https://vitejs.dev/config/
 
 export default defineConfig({
+	resolve: {
+		dedupe: [
+			'vue'
+		]
+	},
 	build: {
 		cssCodeSplit: true,
 		lib: {
@@ -18,6 +22,7 @@ export default defineConfig({
 			formats: ['esm', 'umd', 'iife']
 		},
 		rollupOptions: {
+			external: ['vue'],
 			// 移除assets文件夹下的哈希值
 			output: {
 				assetFileNames: 'assets/[name][extname]',
@@ -25,6 +30,9 @@ export default defineConfig({
 					vue: 'Vue'
 				}
 			}
+		},
+		resolve: {
+			dedupe: ['vue']
 		}
 	},
 	test: {
@@ -47,13 +55,7 @@ export default defineConfig({
 	plugins: [
 		// 添加UnoCSS和JSX插件
 		Unocss({
-			presets: [UnocssIcons({
-				// 其他选项
-				prefix: 'i-',
-				extraProperties: {
-					display: 'inline-block'
-				}
-			}), presetUno(), presetAttributify(), presetIcons()]
+			presets: [presetUno(), presetAttributify(), presetIcons()]
 		}),
 		vueJsx(),
 		vue()
