@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { computed, defineOptions, defineProps } from 'vue'
+import { computed, defineProps } from 'vue'
 
 defineOptions({
   name: 'CTable'
