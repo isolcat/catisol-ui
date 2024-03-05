@@ -13,6 +13,7 @@ export interface inputProps {
   size?: 'default' | 'large' | 'small' // 新增size属性
 }
 
+
 defineOptions({
   name: 'CInput'
 })
