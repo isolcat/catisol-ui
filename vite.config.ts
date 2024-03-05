@@ -1,42 +1,42 @@
 /// <reference types="vitest" />
 import { defineConfig } from 'vite';
+import { resolve } from 'path'
 import vue from '@vitejs/plugin-vue';
 import vueJsx from '@vitejs/plugin-vue-jsx';
 import { presetUno, presetAttributify, presetIcons } from 'unocss';
 import Unocss from './config/unocss';
-import UnocssIcons from '@unocss/preset-icons'
-
-// https://vitejs.dev/config/
+import Components from 'unplugin-vue-components/vite'; // 更新这里
 
 export default defineConfig({
+	resolve: {
+		dedupe: ['vue']
+	},
 	build: {
 		cssCodeSplit: true,
 		lib: {
-			entry: './packages/entry.ts',
+			entry: resolve(__dirname, './packages/entry.ts'),
 			name: 'CatIsolUI',
-			fileName: 'catisol-ui', // 设置打包后的文件名为"catisol-ui"
+			fileName: (format) => `catisol-ui.${format}.js`, // 根据格式设置打包后的文件名
 			formats: ['esm', 'umd', 'iife']
 		},
 		rollupOptions: {
-			// 移除assets文件夹下的哈希值
+			external: ['vue'],
 			output: {
 				assetFileNames: 'assets/[name][extname]',
 				globals: {
 					vue: 'Vue'
 				}
 			}
-		}
+		},
 	},
 	test: {
 		global: true,
-		// 设置支持tsx和jsx组件
 		transformMode: {
 			tsx: 'jsx'
 		},
 		coverage: {
 			reporter: ['text', 'json', 'html']
 		},
-		// 设置测试环境
 		environment: 'happy-dom'
 	},
 	server: {
@@ -47,15 +47,14 @@ export default defineConfig({
 	plugins: [
 		// 添加UnoCSS和JSX插件
 		Unocss({
-			presets: [UnocssIcons({
-				// 其他选项
-				prefix: 'i-',
-				extraProperties: {
-					display: 'inline-block'
-				}
-			}), presetUno(), presetAttributify(), presetIcons()]
+			presets: [presetUno(), presetAttributify(), presetIcons()]
 		}),
 		vueJsx(),
-		vue()
+		vue(),
+		Components({
+			dirs: ['packages/*'],
+			extensions: ['vue'],
+			deep: true, // 如果组件分布在子目录的多个层级中，确保设置为true
+		}),
 	]
 });
