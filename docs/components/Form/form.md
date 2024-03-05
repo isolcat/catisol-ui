@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import demo from './base.vue'
 import demo2 from './rule.vue'
+import demo3 from './myRule.vue'
 
 </script>
 
@@ -15,6 +16,8 @@ import demo2 from './rule.vue'
 在每一个 form 组件中，你需要一个 form-item 字段作为输入项的容器，用于获取值与验证值
 
 <demo />
+
+
 
 <details>
 
@@ -220,3 +223,110 @@ const resetForm = () => {
 
 ```
 </details>
+
+## 自定义表单的规则校验
+
+FormItem 组件允许开发者定义自己的校验规则,以满足特殊的校验需求。这种自定义校验规则与内置的必填(required)、最小长度(min)和最大长度(max)规则无缝集成,提供了极大的灵活性和扩展性。
+
+### 使用方式
+在`rules`属性中,除了可以设置内置的校验规则外,还可以添加一个`validator`属性,其值为一个校验函数。该函数会在表单校验时被调用,并根据其返回值来判断是否通过校验。
+比如下面的例子让重复输入的密码和上面的相等
+
+<demo3 />
+
+
+<details>
+
+<summary>展开查看</summary>
+
+```vue
+<template>
+  <c-form :model="formData" :rules="rules" ref="form" @validate-success="handleSuccess" @validate-failure="handleFailure">
+    <c-form-item label="Username" prop="username">
+      <CInput v-model="formData.username" type="text" />
+    </c-form-item>
+    <c-form-item label="Password" prop="password">
+      <CInput v-model="formData.password" show-password />
+    </c-form-item>
+    <c-form-item label="Confirm Password" prop="confirmPassword">
+      <CInput v-model="formData.confirmPassword" show-password />
+    </c-form-item>
+    <CButton type="submit">Submit</CButton>
+  </c-form>
+</template>
+
+<script>
+
+export default {
+  data() {
+    return {
+      formData: {
+        username: '',
+        password: '',
+        confirmPassword: '',
+      },
+      rules: {
+        username: [
+          { required: true, message: 'Please enter your username' },
+          { min: 3, message: 'Username must be at least 3 characters' },
+        ],
+        password: [
+          { required: true, message: 'Please enter your password' },
+          { min: 6, message: 'Password must be at least 6 characters' },
+        ],
+        confirmPassword: [
+          { required: true, message: 'Please confirm your password' },
+          {
+            validator: (value, rule) => {
+              return value === this.formData.password || 'Passwords do not match';
+            },
+          },
+        ],
+      },
+    };
+  },
+  methods: {
+    handleSuccess(model) {
+      console.log('Form submitted:', model);
+      // 提交表单数据
+    },
+    handleFailure() {
+      console.error('Form validation failed');
+    },
+  },
+};
+</script>
+
+
+
+```
+</details>
+
+
+## FormItem 属性
+
+| 属性名 | 描述                            | 默认值 |
+| ------ | ------------------------------- | ------ |
+| label  | 表单项标签文本                  | -      |
+| prop   | 表单项在 `model` 中对应的属性名 | -      |
+
+## Form 属性
+
+| 属性名        | 描述                                  | 默认值 |
+| ------------- | ------------------------------------- | ------ |
+| model         | 表单数据对象                          | {}     |
+| rules         | 表单验证规则对象                      | {}     |
+| inline        | 是否使用内联布局                      | false  |
+| labelPosition | 标签文本的位置,可选值为 `left`、`top` | 'left' |
+
+## 校验规则属性
+
+在 `rules` 对象中,每个表单字段对应一个校验规则数组,该数组中的每个元素都是一个规则对象,可以包含以下属性:
+
+| 属性名    | 描述                       | 默认值 |
+| --------- | -------------------------- | ------ |
+| required  | 是否为必填项               | false  |
+| min       | 最小长度限制               | -      |
+| max       | 最大长度限制               | -      |
+| message   | 校验失败时的自定义错误信息 | -      |
+| validator | 自定义校验规则函数         | -      |
