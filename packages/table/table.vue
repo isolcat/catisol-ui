@@ -13,6 +13,7 @@ interface tableProps {
   maxHeight?: number
 }
 
+
 const props = defineProps<tableProps>()
 // 表头标题
 const tableTitle = computed(() => {
